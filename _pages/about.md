@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-About Me
+Jithin K Haridas
 ========
 
 * * * * *
@@ -41,7 +41,7 @@ Skills
 Certifcates
 -----------
 
-#### 2021 • Certificate in Business Analytics {#2021--certificate-in-business-analytics}
+#### 2021 • Certificate in Business Analytics
 
 Training of 60 hours on Analytics from IMS Pro School which covers R,
 Python, Regression and Market Basket Analysis.
@@ -49,16 +49,22 @@ Python, Regression and Market Basket Analysis.
 Education
 ---------
 
-#### 2019 • Anna University {#2019--anna-university}
+#### 2019 • Anna University
 
-BE Electronics and Communication Engineering CGPA - 6.5 2014 • Central
-Board of Secondary Education AISSCE / 12th Percentage - 65 2012 •
-Central Board of Secondary Education AISSE / 10th Percentage -88
+BE Electronics and Communication Engineering CGPA - 6.5 
+
+#### 2014 • Central Board of Secondary Education 
+
+AISSCE / 12th Percentage - 65 
+
+#### 2012 • Central Board of Secondary Education 
+
+AISSE / 10th Percentage -88
 
 Career
 ------
 
-#### 07/2018- 10/2018 • FOCUS ACADEMY FOR CAREER ENHANCEMENT, COIMBATORE {#072018--102018--focus-academy-for-career-enhancement-coimbatore}
+#### 07/2018- 10/2018 • FOCUS ACADEMY FOR CAREER ENHANCEMENT, COIMBATORE
 
 #### ASSOCIATE TRAINER
 
