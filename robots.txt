@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://jithinharidas.github.io/paranormal-distributions/sitemap.xml

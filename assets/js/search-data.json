@@ -5,6 +5,26 @@
   
 
   
+      "page1": {
+          "title": "About Me",
+          "content": "Jithin K Haridas . . I specialise in Advanced Analytics, a combination of exploratory data analysis, prescriptive and predictive analytics leveraging techniques across areas like statistical modelling, data mining, machine learning, text analytics. . .",
+          "url": "https://jithinharidas.github.io/paranormal-distributions/about/",
+          "relUrl": "/about/",
+          "date": ""
+      }
+      
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
   
 
   
@@ -17,10 +37,10 @@
   
 
   
-      "page5": {
+      ,"page10": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
-          "url": "/robots.txt",
+          "url": "https://jithinharidas.github.io/paranormal-distributions/robots.txt",
           "relUrl": "/robots.txt",
           "date": ""
       }
