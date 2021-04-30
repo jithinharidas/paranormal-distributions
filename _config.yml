@@ -6,9 +6,15 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: title: ![](log.png){width=4in}
+title: Blog
 description: A Data Science Blog with Jupyter Notebooks.
 github_username: jithinharidas
+header-includes:
+  - \usepackage{titling}
+  - \pretitle{\begin{center}
+    \includegraphics[width=2in,height=2in]{log.png}\LARGE\\}
+  - \posttitle{\end{center}}
+---
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "paranormal-distributions"
 
