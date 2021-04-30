@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-Jithin K Haridas
+[Jithin K Haridas ](https://jithinharidas.github.io/about/)
 ========
 
 * * * * *
