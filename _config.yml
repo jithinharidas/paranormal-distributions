@@ -6,15 +6,8 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: "Paranormal Distributions Blog"
-header-includes:
-- \usepackage{titling}
-- \pretitle{\begin{center}\LARGE\includegraphics[width=12cm]{banner.png}\\[\bigskipamount]}
-- \posttitle{\end{center}}
-output: 
-  pdf_document:
-    toc: true
-image: /images/banner.png
+title: |
+  ![](banner.jpg){width=1in}  
 description: A Data Science Blog with Jupyter Notebooks.
 github_username: jithinharidas
 # you can comment the below line out if your repo name is not different than your baseurl
