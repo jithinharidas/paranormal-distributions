@@ -7,10 +7,6 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: Blog
-output: 
-  html_document:
-    includes:
-      in_header: extLogo.html
 description: A Data Science Blog with Jupyter Notebooks.
 github_username: jithinharidas
 # you can comment the below line out if your repo name is not different than your baseurl
