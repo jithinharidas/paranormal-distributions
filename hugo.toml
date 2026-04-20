@@ -21,3 +21,4 @@ enableRobotsTXT = true
     lineNos = false
   [markup.goldmark.renderer]
     unsafe = true
+publishDir = "docs"
