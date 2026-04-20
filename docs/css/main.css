@@ -592,6 +592,30 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.05em;
 }
 
+/* ── How I Write ── */
+.how-i-write {
+  margin-bottom: 4rem;
+}
+
+.how-i-write__content {
+  border-left: 2px solid var(--border);
+  padding-left: 1.5rem;
+  max-width: 600px;
+}
+
+.how-i-write__content p {
+  font-family: var(--body);
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.how-i-write__content p:last-child {
+  margin-bottom: 0;
+  color: var(--text);
+}
+
 /* ── Contact ── */
 .contact { margin-bottom: 4rem; }
 
