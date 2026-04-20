@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Traffic on Paranormal Distributions</title>
+    <link>https://jithinharidas.github.io/paranormal-distributions/tags/traffic/</link>
+    <description>Recent content in Traffic on Paranormal Distributions</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jithinharidas.github.io/paranormal-distributions/tags/traffic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Who Gets the Credit? On Attribution, Windows, and Dashboards That Lie</title>
+      <link>https://jithinharidas.github.io/paranormal-distributions/posts/who-gets-the-credit-attribution/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://jithinharidas.github.io/paranormal-distributions/posts/who-gets-the-credit-attribution/</guid>
+      <description>&lt;p&gt;There&amp;rsquo;s a meeting I&amp;rsquo;ve sat in more than once where two teams are looking at the same campaign and arriving at completely different numbers.&lt;/p&gt;&#xA;&lt;p&gt;Team A says the campaign brought in 10,000 users. Team B says 4,000. Both are using data. Both are confident. Someone inevitably says &amp;ldquo;can we align on a single source of truth&amp;rdquo; and everyone nods and nothing changes.&lt;/p&gt;&#xA;&lt;p&gt;This is an attribution problem. And it&amp;rsquo;s not a data quality problem, usually. It&amp;rsquo;s a &lt;em&gt;definition&lt;/em&gt; problem wearing a data quality costume.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

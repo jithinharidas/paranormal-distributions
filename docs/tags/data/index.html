@@ -3,24 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
-  <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-  <meta name="author" content="{{ .Site.Params.author }}">
-  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-  <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <title>Data — Paranormal Distributions</title>
+  <meta name="description" content="I find patterns in places they shouldn&#39;t exist. Business Analyst at Swiggy by day, chasing paranormal distributions by night.">
+  <meta name="author" content="Jithin K Haridas">
+  <meta property="og:title" content="Data">
+  <meta property="og:description" content="I find patterns in places they shouldn&#39;t exist. Business Analyst at Swiggy by day, chasing paranormal distributions by night.">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
-  <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
-  <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
-  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
-  {{ if .IsPage }}
-  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02" }}">
-  {{ end }}
+  <link rel="icon" type="image/x-icon" href="/paranormal-distributions/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/paranormal-distributions/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/paranormal-distributions/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/paranormal-distributions/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/paranormal-distributions/favicon.svg">
+  <link rel="stylesheet" href="/paranormal-distributions/css/main.css">
+  
 </head>
 <body>
 
@@ -45,12 +43,50 @@
     </div>
   </nav>
 
-  {{ block "main" . }}{{ end }}
+  
+<div class="container">
+
+  <section class="hero fade-up">
+    <div class="hero__label">Latest writing</div>
+    <h1 class="hero__title">Paranormal<br><span>Distributions</span></h1>
+    <p class="hero__desc">I find patterns in places they shouldn&#39;t exist. Business Analyst at Swiggy by day, chasing paranormal distributions by night.</p>
+    <div class="hero__meta">Jithin K Haridas &nbsp;·&nbsp; Data Analyst, Swiggy</div>
+  </section>
+
+  <section class="posts">
+    <div class="section-label">All posts</div>
+
+    
+    <article class="post-item fade-up">
+      <div class="post-item__date">
+        Apr 01<br>2026
+      </div>
+      <div class="post-item__body">
+        
+        <div class="post-item__cats">
+          <span class="cat-tag">Career</span>
+        </div>
+        
+        <h2 class="post-item__title">
+          <a href="https://jithinharidas.github.io/paranormal-distributions/posts/why-i-started-paranormal-distributions/">Why I Started Paranormal Distributions</a>
+        </h2>
+        
+        <p class="post-item__desc">On starting a blog, working with data, and finding patterns in places they shouldn&#39;t exist.</p>
+        
+      </div>
+    </article>
+    
+  </section>
+
+  
+
+</div>
+
 
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__brand">~/<span>paranormal-distributions</span></div>
-      <div class="footer__copy">© {{ now.Year }} {{ .Site.Params.author }}</div>
+      <div class="footer__copy">© 2026 Jithin K Haridas</div>
     </div>
   </footer>
 
@@ -86,7 +122,7 @@
     let isHovered = false;
     let lastFact = -1;
 
-    // Tooltip logic
+    
     ghost.style.cursor = 'pointer';
     ghost.addEventListener('mouseenter', (e) => {
       isHovered = true;
@@ -136,7 +172,7 @@
       let opacity = 0.72;
       let filter  = 'drop-shadow(0 0 3px rgba(255,107,53,0.25))';
 
-      // Occasionally go white with orange glow
+      
       if (!isWhite && flickerTimer > 280 && Math.random() < 0.008) {
         isWhite = true;
         whiteTimer = 0;
@@ -148,7 +184,7 @@
         if (whiteTimer > 90) { isWhite = false; setGhostColor(false); }
       }
 
-      // Flicker
+      
       if (!isWhite && flickerTimer > 200 && flickerTimer < 206) {
         opacity = flickerTimer % 2 === 0 ? 0.1 : 0.9;
         filter  = 'drop-shadow(0 0 8px rgba(255,107,53,0.8))';
