@@ -2,80 +2,122 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Paranormal Distributions</title>
-    <link>https://paranormaldistributions.com/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Paranormal Distributions</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://paranormaldistributions.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Retention</title>
-      <link>https://paranormaldistributions.com/tags/retention/</link>
-      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://paranormaldistributions.com/tags/retention/</guid>
+      <title>Communication</title>
+      <link>http://localhost:1313/tags/communication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/communication/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lifetime Value</title>
+      <link>http://localhost:1313/tags/lifetime-value/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/lifetime-value/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning</title>
+      <link>http://localhost:1313/tags/machine-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/machine-learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Rfm</title>
-      <link>https://paranormaldistributions.com/tags/rfm/</link>
+      <link>http://localhost:1313/tags/rfm/</link>
       <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://paranormaldistributions.com/tags/rfm/</guid>
+      <guid>http://localhost:1313/tags/rfm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stakeholders</title>
+      <link>http://localhost:1313/tags/stakeholders/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/stakeholders/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Classification</title>
+      <link>http://localhost:1313/tags/classification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/classification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Retention</title>
+      <link>http://localhost:1313/tags/retention/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/retention/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Roc-Auc</title>
+      <link>http://localhost:1313/tags/roc-auc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/roc-auc/</guid>
       <description></description>
     </item>
     <item>
       <title>Segmentation</title>
-      <link>https://paranormaldistributions.com/tags/segmentation/</link>
+      <link>http://localhost:1313/tags/segmentation/</link>
       <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://paranormaldistributions.com/tags/segmentation/</guid>
+      <guid>http://localhost:1313/tags/segmentation/</guid>
       <description></description>
     </item>
     <item>
       <title>Users</title>
-      <link>https://paranormaldistributions.com/tags/users/</link>
+      <link>http://localhost:1313/tags/users/</link>
       <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://paranormaldistributions.com/tags/users/</guid>
+      <guid>http://localhost:1313/tags/users/</guid>
       <description></description>
     </item>
     <item>
       <title>Analytics</title>
-      <link>https://paranormaldistributions.com/tags/analytics/</link>
+      <link>http://localhost:1313/tags/analytics/</link>
       <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://paranormaldistributions.com/tags/analytics/</guid>
+      <guid>http://localhost:1313/tags/analytics/</guid>
       <description></description>
     </item>
     <item>
       <title>Attribution</title>
-      <link>https://paranormaldistributions.com/tags/attribution/</link>
+      <link>http://localhost:1313/tags/attribution/</link>
       <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://paranormaldistributions.com/tags/attribution/</guid>
+      <guid>http://localhost:1313/tags/attribution/</guid>
       <description></description>
     </item>
     <item>
       <title>Dashboards</title>
-      <link>https://paranormaldistributions.com/tags/dashboards/</link>
+      <link>http://localhost:1313/tags/dashboards/</link>
       <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://paranormaldistributions.com/tags/dashboards/</guid>
+      <guid>http://localhost:1313/tags/dashboards/</guid>
       <description></description>
     </item>
     <item>
       <title>Traffic</title>
-      <link>https://paranormaldistributions.com/tags/traffic/</link>
+      <link>http://localhost:1313/tags/traffic/</link>
       <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://paranormaldistributions.com/tags/traffic/</guid>
+      <guid>http://localhost:1313/tags/traffic/</guid>
       <description></description>
     </item>
     <item>
       <title>Data</title>
-      <link>https://paranormaldistributions.com/tags/data/</link>
+      <link>http://localhost:1313/tags/data/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://paranormaldistributions.com/tags/data/</guid>
+      <guid>http://localhost:1313/tags/data/</guid>
       <description></description>
     </item>
     <item>
       <title>Writing</title>
-      <link>https://paranormaldistributions.com/tags/writing/</link>
+      <link>http://localhost:1313/tags/writing/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://paranormaldistributions.com/tags/writing/</guid>
+      <guid>http://localhost:1313/tags/writing/</guid>
       <description></description>
     </item>
   </channel>

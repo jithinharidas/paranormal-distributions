@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lifetime Value — Paranormal Distributions</title>
+  <meta name="description" content="I find patterns in places they shouldn&#39;t exist. Business Analyst at Swiggy by day, chasing paranormal distributions by night.">
+  <meta name="author" content="Jithin K Haridas">
+  <meta property="og:title" content="Lifetime Value">
+  <meta property="og:description" content="I find patterns in places they shouldn&#39;t exist. Business Analyst at Swiggy by day, chasing paranormal distributions by night.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/css/main.css">
+  
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__brand">
+        <span class="brand-full">paranormal-distributions</span>
+        <span class="brand-short">pd</span>
+      </a>
+      <svg class="nav-ghost" viewBox="0 0 40 50" xmlns="http://www.w3.org/2000/svg" width="18" height="22" aria-label="ghost">
+        <path class="ghost-body" d="M5 25 Q5 8 20 8 Q35 8 35 25 L35 44 Q35 44 30 40 Q27 37 25 40 Q22 43 20 40 Q18 37 15 40 Q13 43 10 40 Q5 44 5 44 Z" fill="#ff6b35" fill-opacity="0.18" stroke="#ff6b35" stroke-width="1.2" stroke-opacity="0.6"/>
+        <ellipse class="ghost-eye-l" cx="14.5" cy="24" rx="4" ry="5" fill="#ff6b35" fill-opacity="0.9"/>
+        <ellipse cx="15.5" cy="23" rx="1.5" ry="2" fill="#0d0f14"/>
+        <ellipse class="ghost-eye-r" cx="25.5" cy="24" rx="4" ry="5" fill="#ff6b35" fill-opacity="0.9"/>
+        <ellipse cx="26.5" cy="23" rx="1.5" ry="2" fill="#0d0f14"/>
+      </svg>
+      <div class="ghost-tooltip" id="ghostTooltip"></div>
+      <ul class="nav__links">
+        <li><a href="/">Posts</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  
+<div class="container">
+
+  <section class="hero fade-up">
+    <div class="hero__label">Latest writing</div>
+    <h1 class="hero__title">Paranormal<br><span>Distributions</span></h1>
+    <p class="hero__desc">I find patterns in places they shouldn&#39;t exist. Business Analyst at Swiggy by day, chasing paranormal distributions by night.</p>
+    <div class="hero__meta">Jithin K Haridas &nbsp;·&nbsp; Data Analyst, Swiggy</div>
+  </section>
+
+  <section class="posts">
+    <div class="section-label">All posts</div>
+
+    
+    <article class="post-item fade-up">
+      <div class="post-item__date">
+        May 03<br>2026
+      </div>
+      <div class="post-item__body">
+        
+        <div class="post-item__cats">
+          <span class="cat-tag">Analytics</span>
+        </div>
+        
+        <h2 class="post-item__title">
+          <a href="http://localhost:1313/posts/the-model-said-091-my-stakeholder-said-prove-it/">The Model Said 0.91. My Stakeholder Said Prove It.</a>
+        </h2>
+        
+        <p class="post-item__desc">AUC is for you. Revenue per cohort is for them. Both are true. Only one lands in a meeting.</p>
+        
+      </div>
+    </article>
+    
+  </section>
+
+  
+
+</div>
+
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">~/<span>paranormal-distributions</span></div>
+      <div class="footer__copy">© 2026 Jithin K Haridas</div>
+    </div>
+  </footer>
+
+  <script>
+    const ghost     = document.querySelector('.nav-ghost');
+    const nav       = document.querySelector('.nav__inner');
+    const tooltip   = document.getElementById('ghostTooltip');
+    const ghostBody = document.querySelector('.ghost-body');
+    const eyeL      = document.querySelector('.ghost-eye-l');
+    const eyeR      = document.querySelector('.ghost-eye-r');
+
+    const facts = [
+      "Benford's Law: in most real datasets, ~30% of numbers start with 1. Fraud investigators use this to catch fakes.",
+      "The average dashboard has at least one metric nobody has looked at in 6 months.",
+      "Simpson's Paradox: a trend can appear in each group of data but disappear when the groups are combined.",
+      "Google processes around 8.5 billion searches per day. Most analytics teams are still arguing about last-touch attribution.",
+      "The term 'bug' in computing comes from an actual moth found in a Harvard computer relay in 1947.",
+      "A/B tests need way more traffic than most people think. At 5% conversion, detecting a 10% lift needs ~50,000 users per variant.",
+      "Goodhart's Law: when a measure becomes a target, it ceases to be a good measure.",
+      "The first spreadsheet, VisiCalc, was released in 1979. People have been pivoting data ever since.",
+      "Survivorship bias: we study successful companies and ignore the failures. Most strategy advice is haunted by this.",
+      "The Dunning-Kruger effect was itself replicated with questionable methodology. Even the bias has bias.",
+      "Dark data: most organizations capture and store data they never actually analyze. Estimated at 80% of all data.",
+      "Regression to the mean: extreme performances tend to be followed by more average ones. This is why your 'best' campaign is hard to repeat.",
+      "The first recorded use of the word 'statistics' was in 1749. It meant 'the science of the state'.",
+      "Correlation between Nicolas Cage films and pool drownings: 0.67. Causation: definitely not.",
+      "Most data quality issues are discovered in production. At 2am. Before a Monday review.",
+    ];
+
+    let x = 130, dir = 1, tick = 0;
+    let flickerTimer = Math.floor(Math.random() * 300);
+    let isWhite = false, whiteTimer = 0;
+    let isHovered = false;
+    let lastFact = -1;
+
+    
+    ghost.style.cursor = 'pointer';
+    ghost.addEventListener('mouseenter', (e) => {
+      isHovered = true;
+      let idx;
+      do { idx = Math.floor(Math.random() * facts.length); } while (idx === lastFact);
+      lastFact = idx;
+      tooltip.textContent = facts[idx];
+      tooltip.classList.add('visible');
+      positionTooltip(e);
+    });
+    ghost.addEventListener('mousemove', positionTooltip);
+    ghost.addEventListener('mouseleave', () => {
+      isHovered = false;
+      tooltip.classList.remove('visible');
+    });
+
+    function positionTooltip(e) {
+      const navRect = nav.getBoundingClientRect();
+      const tx = parseFloat(ghost.style.left || 0);
+      tooltip.style.left = Math.min(tx, nav.offsetWidth - 260) + 'px';
+      tooltip.style.top = '110%';
+    }
+
+    function setGhostColor(white) {
+      const bodyFill   = white ? 'rgba(255,255,255,0.15)' : 'rgba(255,107,53,0.18)';
+      const bodyStroke = white ? 'rgba(255,255,255,0.5)'  : 'rgba(255,107,53,0.6)';
+      const eyeFill    = white ? 'rgba(255,255,255,0.95)' : 'rgba(255,107,53,0.9)';
+      ghostBody.setAttribute('fill', bodyFill);
+      ghostBody.setAttribute('stroke', bodyStroke);
+      eyeL.setAttribute('fill', eyeFill);
+      eyeR.setAttribute('fill', eyeFill);
+    }
+
+    function animate() {
+      tick++;
+      flickerTimer++;
+      if (isWhite) whiteTimer++;
+
+      if (!isHovered) {
+        x += 0.35 * dir;
+        const navW = nav.offsetWidth;
+        if (x > navW - 160) { dir = -1; ghost.style.transform = 'scaleX(-1)'; }
+        if (x < 130)        { dir =  1; ghost.style.transform = 'scaleX(1)'; }
+      }
+
+      const y = Math.sin(tick * 0.04) * 3;
+      let opacity = 0.72;
+      let filter  = 'drop-shadow(0 0 3px rgba(255,107,53,0.25))';
+
+      
+      if (!isWhite && flickerTimer > 280 && Math.random() < 0.008) {
+        isWhite = true;
+        whiteTimer = 0;
+        setGhostColor(true);
+      }
+      if (isWhite) {
+        filter  = 'drop-shadow(0 0 10px rgba(255,107,53,0.9)) drop-shadow(0 0 4px rgba(255,255,255,0.6))';
+        opacity = 0.95;
+        if (whiteTimer > 90) { isWhite = false; setGhostColor(false); }
+      }
+
+      
+      if (!isWhite && flickerTimer > 200 && flickerTimer < 206) {
+        opacity = flickerTimer % 2 === 0 ? 0.1 : 0.9;
+        filter  = 'drop-shadow(0 0 8px rgba(255,107,53,0.8))';
+      }
+      if (flickerTimer > 400) flickerTimer = 0;
+
+      ghost.style.position  = 'absolute';
+      ghost.style.left      = x + 'px';
+      ghost.style.top       = '50%';
+      ghost.style.marginTop = (y - 11) + 'px';
+      ghost.style.opacity   = isHovered ? 1 : opacity;
+      ghost.style.filter    = isHovered ? 'drop-shadow(0 0 10px rgba(255,107,53,0.9))' : filter;
+
+      requestAnimationFrame(animate);
+    }
+
+    nav.style.position = 'relative';
+    ghost.style.pointerEvents = 'auto';
+    animate();
+  </script>
+
+</body>
+</html>

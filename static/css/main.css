@@ -716,6 +716,22 @@ img { max-width: 100%; display: block; }
 
 .footer__brand span { color: var(--accent); }
 
+.footer__social {
+  display: flex;
+  align-items: center;
+}
+
+.footer__social-link {
+  color: var(--text-mute);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.footer__social-link:hover {
+  color: var(--accent);
+}
+
 .footer__copy {
   font-family: var(--mono);
   font-size: 0.65rem;

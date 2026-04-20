@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Roc-Auc on Paranormal Distributions</title>
+    <link>http://localhost:1313/tags/roc-auc/</link>
+    <description>Recent content in Roc-Auc on Paranormal Distributions</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/roc-auc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Teaching a Machine Who Your Best Customers Are</title>
+      <link>http://localhost:1313/posts/teaching-a-machine-who-your-best-customers-are/</link>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/teaching-a-machine-who-your-best-customers-are/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;http://localhost:1313/posts/not-all-users-are-your-users/&#34;&gt;previous post&lt;/a&gt; left you with six user archetypes and a ranked list of segments. Champions, Loyals, At Risk, One-Order Wonders, Dormants, and the occasional unpredictable person who replies to a three-day-old message like it just came in.&lt;/p&gt;&#xA;&lt;p&gt;You know who is who. Now what?&lt;/p&gt;&#xA;&lt;p&gt;Here is the problem nobody mentions. Your At Risk segment has 200,000 users. You cannot re-engage all of them. Budget does not exist for that. Neither does the time. And honestly, not all of them are worth the same effort. Some of them are four days away from ordering again anyway. Some of them checked out fourteen months ago and are not coming back under any circumstances.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching a Machine Who Your Best Customers Are — Paranormal Distributions</title>
+  <meta name="description" content="RFM segments tell you where your users are. A prediction model tells you where they are going. Here is how to build one and how to know if it actually works.">
+  <meta name="author" content="Jithin K Haridas">
+  <meta property="og:title" content="Teaching a Machine Who Your Best Customers Are">
+  <meta property="og:description" content="RFM segments tell you where your users are. A prediction model tells you where they are going. Here is how to build one and how to know if it actually works.">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <meta property="article:published_time" content="2026-04-26">
+  
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__brand">
+        <span class="brand-full">paranormal-distributions</span>
+        <span class="brand-short">pd</span>
+      </a>
+      <svg class="nav-ghost" viewBox="0 0 40 50" xmlns="http://www.w3.org/2000/svg" width="18" height="22" aria-label="ghost">
+        <path class="ghost-body" d="M5 25 Q5 8 20 8 Q35 8 35 25 L35 44 Q35 44 30 40 Q27 37 25 40 Q22 43 20 40 Q18 37 15 40 Q13 43 10 40 Q5 44 5 44 Z" fill="#ff6b35" fill-opacity="0.18" stroke="#ff6b35" stroke-width="1.2" stroke-opacity="0.6"/>
+        <ellipse class="ghost-eye-l" cx="14.5" cy="24" rx="4" ry="5" fill="#ff6b35" fill-opacity="0.9"/>
+        <ellipse cx="15.5" cy="23" rx="1.5" ry="2" fill="#0d0f14"/>
+        <ellipse class="ghost-eye-r" cx="25.5" cy="24" rx="4" ry="5" fill="#ff6b35" fill-opacity="0.9"/>
+        <ellipse cx="26.5" cy="23" rx="1.5" ry="2" fill="#0d0f14"/>
+      </svg>
+      <div class="ghost-tooltip" id="ghostTooltip"></div>
+      <ul class="nav__links">
+        <li><a href="/">Posts</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  
+<div class="container">
+  <article class="post">
+
+    <header class="post__header fade-up">
+      
+      <div class="post__cats">
+        <span class="cat-tag">Analytics</span>
+      </div>
+      
+      <h1 class="post__title">Teaching a Machine Who Your Best Customers Are</h1>
+      <div class="post__meta">
+        <span>April 26, 2026</span>
+        <span>7 min read</span>
+      </div>
+      <div class="post__divider"></div>
+    </header>
+
+    <div class="post__content fade-up fade-up-2">
+      <p>The <a href="/posts/not-all-users-are-your-users/">previous post</a> left you with six user archetypes and a ranked list of segments. Champions, Loyals, At Risk, One-Order Wonders, Dormants, and the occasional unpredictable person who replies to a three-day-old message like it just came in.</p>
+<p>You know who is who. Now what?</p>
+<p>Here is the problem nobody mentions. Your At Risk segment has 200,000 users. You cannot re-engage all of them. Budget does not exist for that. Neither does the time. And honestly, not all of them are worth the same effort. Some of them are four days away from ordering again anyway. Some of them checked out fourteen months ago and are not coming back under any circumstances.</p>
+<p>The segment tells you the neighbourhood. What you actually need is the specific address.</p>
+<p>This is where a prediction model comes in. And this post is about building one, understanding what makes it good, and knowing when it is lying to you.</p>
+<hr>
+<h2 id="the-question-you-are-actually-asking">The question you are actually asking</h2>
+<p>A prediction model answers one yes or no question about a user.</p>
+<p>Will this person order again in the next 30 days?</p>
+<p>Not &ldquo;what segment are they in.&rdquo; Not &ldquo;what is their lifetime value.&rdquo; Just: will they come back or not? Yes or no.</p>
+<p>The model does not spit out yes or no directly. It gives you a probability. Something like 0.82, meaning there is an 82% chance this user will order again. You then draw a line somewhere, say 0.5, and everyone above it gets classified as &ldquo;will order,&rdquo; everyone below as &ldquo;will not.&rdquo;</p>
+<p>You can move that line up or down depending on what you are trying to do. More on why that matters shortly.</p>
+<p>The model learns from history. You give it data about 100,000 users from six months ago, tell it which ones ordered in the following 30 days and which ones did not, and ask it to find the pattern. That is supervised learning. You are giving it the answers to past questions so it can answer future ones.</p>
+<hr>
+<h2 id="what-you-feed-it">What you feed it</h2>
+<p>For an RFM-based model, most of the inputs are things you already have.</p>
+<p>Days since last order. Total number of orders. Average order value. Whether the gap between orders is getting longer or shorter. How long the user has been a customer.</p>
+<p>A newer user with low frequency is normal. An older user with low frequency is a signal. The model learns to tell the difference.</p>
+<p>You can add more — what channel the user came from, what time of day they usually order, whether they used a discount on their last order. The general principle is to give the model everything you know that might be relevant, and let it figure out which things actually matter. It is surprisingly good at this.</p>
+<hr>
+<h2 id="why-accuracy-will-get-you-into-trouble">Why accuracy will get you into trouble</h2>
+<p>Here is the part that trips most people up.</p>
+<p>Suppose 90% of the users in your dataset did not order in the 30-day window you are predicting. A model that predicts &ldquo;will not order&rdquo; for every single user, without looking at any features at all, would be 90% accurate.</p>
+<p>That model is completely useless. You would never identify a single person worth reaching out to. But by the accuracy metric, it looks like a strong result.</p>
+<p>This is called the class imbalance problem. When one outcome is much more common than the other, accuracy is a terrible way to measure whether your model is actually working.</p>
+<p>Think of it like a weather app that always predicts &ldquo;sunny&rdquo; in Bangalore from February to May. Technically right most of the time. Absolutely useless the one week it actually matters.</p>
+<svg viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;font-family:'JetBrains Mono',monospace;">
+  <rect width="680" height="340" rx="6" fill="#12151c"/>
+
+  <text x="340" y="24" text-anchor="middle" fill="#3d4557" font-size="10" letter-spacing="2">CONFUSION MATRIX · WHY ACCURACY MISLEADS</text>
+
+  
+  <text x="310" y="52" text-anchor="middle" fill="#6b778f" font-size="11">Predicted: NO</text>
+  <text x="500" y="52" text-anchor="middle" fill="#6b778f" font-size="11">Predicted: YES</text>
+
+  
+  <text x="110" y="130" text-anchor="middle" fill="#6b778f" font-size="11">Actual: NO</text>
+  <text x="110" y="240" text-anchor="middle" fill="#6b778f" font-size="11">Actual: YES</text>
+
+  
+  <rect x="190" y="62" width="220" height="110" rx="4" fill="#1e2333" stroke="#262d3f"/>
+  <text x="300" y="108" text-anchor="middle" fill="#c8cfe0" font-size="36" font-weight="bold">8,100</text>
+  <text x="300" y="134" text-anchor="middle" fill="#6b778f" font-size="11">True Negatives</text>
+  <text x="300" y="150" text-anchor="middle" fill="#3d4557" font-size="10">correctly said "won't churn"</text>
+
+  
+  <rect x="420" y="62" width="220" height="110" rx="4" fill="#1e2333" stroke="#262d3f"/>
+  <text x="530" y="108" text-anchor="middle" fill="#c8cfe0" font-size="36" font-weight="bold">800</text>
+  <text x="530" y="134" text-anchor="middle" fill="#6b778f" font-size="11">False Positives</text>
+  <text x="530" y="150" text-anchor="middle" fill="#3d4557" font-size="10">incorrectly flagged as churn</text>
+
+  
+  <rect x="190" y="182" width="220" height="110" rx="4" fill="#ff6b35" fill-opacity="0.08" stroke="#ff6b35" stroke-opacity="0.3"/>
+  <text x="300" y="228" text-anchor="middle" fill="#ff6b35" font-size="36" font-weight="bold">900</text>
+  <text x="300" y="254" text-anchor="middle" fill="#ff6b35" font-size="11">False Negatives</text>
+  <text x="300" y="270" text-anchor="middle" fill="#ff6b35" fill-opacity="0.7" font-size="10">missed actual churners</text>
+
+  
+  <rect x="420" y="182" width="220" height="110" rx="4" fill="#ff6b35" fill-opacity="0.15" stroke="#ff6b35" stroke-opacity="0.5"/>
+  <text x="530" y="228" text-anchor="middle" fill="#ff6b35" font-size="36" font-weight="bold">200</text>
+  <text x="530" y="254" text-anchor="middle" fill="#ff6b35" font-size="11">True Positives</text>
+  <text x="530" y="270" text-anchor="middle" fill="#ff6b35" fill-opacity="0.7" font-size="10">correctly caught churners</text>
+
+  
+  <text x="340" y="314" text-anchor="middle" fill="#3d4557" font-size="10">Accuracy: 93% · Looks great · But only caught 200 of 1,100 actual churners</text>
+</svg>
+
+<p>What you want to know is something more specific: when the model says someone is going to churn, are they actually churning? And when someone actually churns, is the model catching them? These are two different questions and they have names.</p>
+<p><strong>Precision</strong> is the first one. Of everyone the model flagged as high churn risk, what fraction actually churned?</p>
+<p><strong>Recall</strong> is the second. Of everyone who actually churned, what fraction did the model catch?</p>
+<p>These two numbers are in tension. Lower the threshold and you catch more churners but also flag a lot of people who were fine. Recall goes up, precision goes down. Raise it and you are more selective but you miss people. The threshold is a business decision, not a model decision.</p>
+<hr>
+<h2 id="the-one-number-that-actually-tells-you-if-your-model-is-good">The one number that actually tells you if your model is good</h2>
+<p>The ROC-AUC. Receiver Operating Characteristic, Area Under the Curve. A name that explains absolutely nothing about what it does, which is very on-brand for statistics.</p>
+<p>Here is what it actually measures.</p>
+<p>Imagine you pick two users at random. One who churned, one who did not. The AUC is the probability that your model correctly assigns the higher churn probability to the one who actually churned.</p>
+<p>AUC of 0.5: the model is guessing. Coin flip. You wasted everyone&rsquo;s time.
+AUC of 0.7: decent. Better than random, usable with some caution.
+AUC of 0.8: good. Most production models sit around here.
+AUC of 0.9 and above: very good. The model is genuinely doing something useful.</p>
+<svg viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;font-family:'JetBrains Mono',monospace;">
+  <rect width="680" height="420" rx="6" fill="#12151c"/>
+
+  
+  <line x1="100" y1="40" x2="100" y2="340" stroke="#262d3f" stroke-width="1"/>
+  <line x1="100" y1="340" x2="580" y2="340" stroke="#262d3f" stroke-width="1"/>
+  <line x1="100" y1="240" x2="580" y2="240" stroke="#262d3f" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="100" y1="140" x2="580" y2="140" stroke="#262d3f" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="220" y1="40" x2="220" y2="340" stroke="#262d3f" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="340" y1="40" x2="340" y2="340" stroke="#262d3f" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="460" y1="40" x2="460" y2="340" stroke="#262d3f" stroke-width="0.5" stroke-dasharray="3,3"/>
+
+  
+  <text x="340" y="388" text-anchor="middle" fill="#6b778f" font-size="11">False Positive Rate</text>
+  <text x="30" y="190" text-anchor="middle" fill="#6b778f" font-size="11" transform="rotate(-90,30,190)">True Positive Rate</text>
+
+  
+  <text x="100" y="358" text-anchor="middle" fill="#3d4557" font-size="10">0.0</text>
+  <text x="220" y="358" text-anchor="middle" fill="#3d4557" font-size="10">0.25</text>
+  <text x="340" y="358" text-anchor="middle" fill="#3d4557" font-size="10">0.5</text>
+  <text x="460" y="358" text-anchor="middle" fill="#3d4557" font-size="10">0.75</text>
+  <text x="580" y="358" text-anchor="middle" fill="#3d4557" font-size="10">1.0</text>
+
+  
+  <text x="88" y="344" text-anchor="end" fill="#3d4557" font-size="10">0.0</text>
+  <text x="88" y="244" text-anchor="end" fill="#3d4557" font-size="10">0.5</text>
+  <text x="88" y="144" text-anchor="end" fill="#3d4557" font-size="10">0.75</text>
+  <text x="88" y="44" text-anchor="end" fill="#3d4557" font-size="10">1.0</text>
+
+  
+  <path d="M100,340 C140,260 160,140 200,100 C240,65 300,50 340,48 C400,44 460,42 580,40 L580,340 Z"
+    fill="#ff6b35" fill-opacity="0.08"/>
+
+  
+  <line x1="100" y1="340" x2="580" y2="40" stroke="#3d4557" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  
+  <path d="M100,340 C140,260 160,140 200,100 C240,65 300,50 340,48 C400,44 460,42 580,40"
+    fill="none" stroke="#ff6b35" stroke-width="2.5" stroke-linecap="round"/>
+
+  
+  <text x="360" y="200" fill="#3d4557" font-size="11">Random model</text>
+  <text x="362" y="214" fill="#3d4557" font-size="11">(AUC = 0.5)</text>
+
+  <text x="240" y="118" fill="#ff6b35" font-size="11">Your model</text>
+  <text x="240" y="132" fill="#ff6b35" font-size="11">(AUC = 0.91)</text>
+
+  
+  <text x="430" y="240" fill="#ff6b35" font-size="11" fill-opacity="0.7">AUC</text>
+
+  
+  <text x="340" y="20" text-anchor="middle" fill="#3d4557" font-size="10" letter-spacing="2">ROC CURVE · BETTER MODEL CURVES UP AND LEFT</text>
+</svg>
+
+<p>The reason AUC is better than accuracy is that it evaluates the model across all possible thresholds at once. It does not care where you drew the line. It just asks: is the model, in general, ranking the churners above the non-churners? If it is, you have something worth using.</p>
+<hr>
+<h2 id="what-091-actually-means">What 0.91 actually means</h2>
+<p>It does not mean the model is right 91% of the time. People always assume this and it is almost never what AUC means.</p>
+<p>What it means is: if you take one user who churned and one who did not, the model will correctly rank the churner as higher risk 91% of the time. That is a very good model. Not perfect, nothing is, but good enough to be genuinely useful.</p>
+<p>In practice, you take your full user base, run the model, get a probability score for every user, sort them from highest to lowest churn risk, and target the top 10%.</p>
+<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;font-family:'JetBrains Mono',monospace;">
+  <rect width="680" height="360" rx="6" fill="#12151c"/>
+
+  <text x="340" y="24" text-anchor="middle" fill="#3d4557" font-size="10" letter-spacing="2">MODEL OUTPUT · RANKED BY CHURN PROBABILITY</text>
+
+  
+  <text x="60"  y="50" fill="#6b778f" font-size="10">RANK</text>
+  <text x="130" y="50" fill="#6b778f" font-size="10">USER</text>
+  <text x="310" y="50" fill="#6b778f" font-size="10">CHURN PROBABILITY</text>
+  <text x="530" y="50" fill="#6b778f" font-size="10">ACTION</text>
+  <line x1="40" y1="56" x2="640" y2="56" stroke="#1e2333" stroke-width="1"/>
+
+  
+  <rect x="36" y="60" width="6" height="168" rx="2" fill="#ff6b35"/>
+  <text x="20" y="148" fill="#ff6b35" font-size="9" transform="rotate(-90,20,148)">TOP 10%</text>
+
+  
+  
+  <rect x="44" y="62" width="596" height="38" rx="3" fill="#ff6b35" fill-opacity="0.12"/>
+  <text x="60"  y="86" fill="#ff6b35" font-size="12" font-weight="bold">#1</text>
+  <text x="130" y="86" fill="#c8cfe0" font-size="12">User 4821903</text>
+  <rect x="310" y="70" width="172" height="18" rx="2" fill="#ff6b35" fill-opacity="0.8"/>
+  <text x="396" y="83" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">0.97</text>
+  <text x="530" y="86" fill="#ff6b35" font-size="11">Win-back campaign</text>
+
+  
+  <rect x="44" y="104" width="596" height="38" rx="3" fill="#ff6b35" fill-opacity="0.08"/>
+  <text x="60"  y="128" fill="#ff6b35" font-size="12" font-weight="bold">#2</text>
+  <text x="130" y="128" fill="#c8cfe0" font-size="12">User 7710042</text>
+  <rect x="310" y="112" width="158" height="18" rx="2" fill="#ff6b35" fill-opacity="0.7"/>
+  <text x="389" y="125" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">0.94</text>
+  <text x="530" y="128" fill="#ff6b35" font-size="11">Win-back campaign</text>
+
+  
+  <rect x="44" y="146" width="596" height="38" rx="3" fill="#ff6b35" fill-opacity="0.06"/>
+  <text x="60"  y="170" fill="#ff6b35" font-size="12" font-weight="bold">#3</text>
+  <text x="130" y="170" fill="#c8cfe0" font-size="12">User 2209871</text>
+  <rect x="310" y="154" width="148" height="18" rx="2" fill="#ff6b35" fill-opacity="0.6"/>
+  <text x="384" y="167" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">0.91</text>
+  <text x="530" y="170" fill="#ff6b35" font-size="11">Win-back campaign</text>
+
+  
+  <line x1="44" y1="232" x2="640" y2="232" stroke="#262d3f" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="340" y="224" text-anchor="middle" fill="#3d4557" font-size="10">· · · 19,997 more users · · ·</text>
+
+  
+  <rect x="44" y="238" width="596" height="34" rx="3" fill="#1e2333"/>
+  <text x="60"  y="260" fill="#3d4557" font-size="12">#18,421</text>
+  <text x="130" y="260" fill="#6b778f" font-size="12">User 9931204</text>
+  <rect x="310" y="246" width="42" height="18" rx="2" fill="#262d3f"/>
+  <text x="331" y="259" text-anchor="middle" fill="#3d4557" font-size="11">0.11</text>
+  <text x="530" y="260" fill="#3d4557" font-size="11">No action needed</text>
+
+  <rect x="44" y="276" width="596" height="34" rx="3" fill="#1e2333"/>
+  <text x="60"  y="298" fill="#3d4557" font-size="12">#20,000</text>
+  <text x="130" y="298" fill="#6b778f" font-size="12">User 5540018</text>
+  <rect x="310" y="284" width="22" height="18" rx="2" fill="#262d3f"/>
+  <text x="321" y="297" text-anchor="middle" fill="#3d4557" font-size="11">0.03</text>
+  <text x="530" y="298" fill="#3d4557" font-size="11">No action needed</text>
+
+  
+  <text x="340" y="340" text-anchor="middle" fill="#3d4557" font-size="10">Target the top 10% · Everyone else is lower priority for now</text>
+</svg>
+
+<p>These are the users who look most like past users who churned. Your win-back campaign goes here. You do not need the model to be perfect. You just need it to do better than picking randomly. AUC of 0.91 clears that bar comfortably.</p>
+<hr>
+<h2 id="the-thing-that-will-eventually-break-your-model">The thing that will eventually break your model</h2>
+<p>Models drift.</p>
+<p>User behaviour changes. Your product changes. A campaign runs and changes how people interact with the app. The model you trained six months ago is looking at the world as it was, not as it is.</p>
+<p>This means two things.</p>
+<p>First, check the AUC periodically on new data. If it starts dropping, the model is going stale. Retrain it.</p>
+<p>Second, the first version you build is not the final version. It is a starting point. You learn from what it gets wrong, you add features, you retrain, you improve. Some people want the model to be a permanent answer. It is not. It is a living thing that needs attention. Like most things in analytics.</p>
+<hr>
+<h2 id="the-bit-i-want-you-to-remember">The bit I want you to remember</h2>
+<p>The model does not tell you what to say to the users it flags. It does not design the campaign. It does not decide what offer to make.</p>
+<p>It tells you where to look.</p>
+<p>The top 10% of users on that ranked list are the ones who most need a conversation. What that conversation looks like is still a human decision.</p>
+<p>The machine learned who your best customers are and who is about to stop being one. What you do with that is still on you.</p>
+
+    </div>
+
+  </article>
+</div>
+
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">~/<span>paranormal-distributions</span></div>
+      <div class="footer__copy">© 2026 Jithin K Haridas</div>
+    </div>
+  </footer>
+
+  <script>
+    const ghost     = document.querySelector('.nav-ghost');
+    const nav       = document.querySelector('.nav__inner');
+    const tooltip   = document.getElementById('ghostTooltip');
+    const ghostBody = document.querySelector('.ghost-body');
+    const eyeL      = document.querySelector('.ghost-eye-l');
+    const eyeR      = document.querySelector('.ghost-eye-r');
+
+    const facts = [
+      "Benford's Law: in most real datasets, ~30% of numbers start with 1. Fraud investigators use this to catch fakes.",
+      "The average dashboard has at least one metric nobody has looked at in 6 months.",
+      "Simpson's Paradox: a trend can appear in each group of data but disappear when the groups are combined.",
+      "Google processes around 8.5 billion searches per day. Most analytics teams are still arguing about last-touch attribution.",
+      "The term 'bug' in computing comes from an actual moth found in a Harvard computer relay in 1947.",
+      "A/B tests need way more traffic than most people think. At 5% conversion, detecting a 10% lift needs ~50,000 users per variant.",
+      "Goodhart's Law: when a measure becomes a target, it ceases to be a good measure.",
+      "The first spreadsheet, VisiCalc, was released in 1979. People have been pivoting data ever since.",
+      "Survivorship bias: we study successful companies and ignore the failures. Most strategy advice is haunted by this.",
+      "The Dunning-Kruger effect was itself replicated with questionable methodology. Even the bias has bias.",
+      "Dark data: most organizations capture and store data they never actually analyze. Estimated at 80% of all data.",
+      "Regression to the mean: extreme performances tend to be followed by more average ones. This is why your 'best' campaign is hard to repeat.",
+      "The first recorded use of the word 'statistics' was in 1749. It meant 'the science of the state'.",
+      "Correlation between Nicolas Cage films and pool drownings: 0.67. Causation: definitely not.",
+      "Most data quality issues are discovered in production. At 2am. Before a Monday review.",
+    ];
+
+    let x = 130, dir = 1, tick = 0;
+    let flickerTimer = Math.floor(Math.random() * 300);
+    let isWhite = false, whiteTimer = 0;
+    let isHovered = false;
+    let lastFact = -1;
+
+    
+    ghost.style.cursor = 'pointer';
+    ghost.addEventListener('mouseenter', (e) => {
+      isHovered = true;
+      let idx;
+      do { idx = Math.floor(Math.random() * facts.length); } while (idx === lastFact);
+      lastFact = idx;
+      tooltip.textContent = facts[idx];
+      tooltip.classList.add('visible');
+      positionTooltip(e);
+    });
+    ghost.addEventListener('mousemove', positionTooltip);
+    ghost.addEventListener('mouseleave', () => {
+      isHovered = false;
+      tooltip.classList.remove('visible');
+    });
+
+    function positionTooltip(e) {
+      const navRect = nav.getBoundingClientRect();
+      const tx = parseFloat(ghost.style.left || 0);
+      tooltip.style.left = Math.min(tx, nav.offsetWidth - 260) + 'px';
+      tooltip.style.top = '110%';
+    }
+
+    function setGhostColor(white) {
+      const bodyFill   = white ? 'rgba(255,255,255,0.15)' : 'rgba(255,107,53,0.18)';
+      const bodyStroke = white ? 'rgba(255,255,255,0.5)'  : 'rgba(255,107,53,0.6)';
+      const eyeFill    = white ? 'rgba(255,255,255,0.95)' : 'rgba(255,107,53,0.9)';
+      ghostBody.setAttribute('fill', bodyFill);
+      ghostBody.setAttribute('stroke', bodyStroke);
+      eyeL.setAttribute('fill', eyeFill);
+      eyeR.setAttribute('fill', eyeFill);
+    }
+
+    function animate() {
+      tick++;
+      flickerTimer++;
+      if (isWhite) whiteTimer++;
+
+      if (!isHovered) {
+        x += 0.35 * dir;
+        const navW = nav.offsetWidth;
+        if (x > navW - 160) { dir = -1; ghost.style.transform = 'scaleX(-1)'; }
+        if (x < 130)        { dir =  1; ghost.style.transform = 'scaleX(1)'; }
+      }
+
+      const y = Math.sin(tick * 0.04) * 3;
+      let opacity = 0.72;
+      let filter  = 'drop-shadow(0 0 3px rgba(255,107,53,0.25))';
+
+      
+      if (!isWhite && flickerTimer > 280 && Math.random() < 0.008) {
+        isWhite = true;
+        whiteTimer = 0;
+        setGhostColor(true);
+      }
+      if (isWhite) {
+        filter  = 'drop-shadow(0 0 10px rgba(255,107,53,0.9)) drop-shadow(0 0 4px rgba(255,255,255,0.6))';
+        opacity = 0.95;
+        if (whiteTimer > 90) { isWhite = false; setGhostColor(false); }
+      }
+
+      
+      if (!isWhite && flickerTimer > 200 && flickerTimer < 206) {
+        opacity = flickerTimer % 2 === 0 ? 0.1 : 0.9;
+        filter  = 'drop-shadow(0 0 8px rgba(255,107,53,0.8))';
+      }
+      if (flickerTimer > 400) flickerTimer = 0;
+
+      ghost.style.position  = 'absolute';
+      ghost.style.left      = x + 'px';
+      ghost.style.top       = '50%';
+      ghost.style.marginTop = (y - 11) + 'px';
+      ghost.style.opacity   = isHovered ? 1 : opacity;
+      ghost.style.filter    = isHovered ? 'drop-shadow(0 0 10px rgba(255,107,53,0.9))' : filter;
+
+      requestAnimationFrame(animate);
+    }
+
+    nav.style.position = 'relative';
+    ghost.style.pointerEvents = 'auto';
+    animate();
+  </script>
+
+</body>
+</html>
