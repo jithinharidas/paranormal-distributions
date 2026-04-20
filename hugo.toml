@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Paranormal Distributions"
 paginate = 10
 enableRobotsTXT = true
+publishDir = "docs"
 
 [params]
   description = "I find patterns in places they shouldn't exist. Business Analyst at Swiggy by day, chasing paranormal distributions by night."
@@ -21,4 +22,3 @@ enableRobotsTXT = true
     lineNos = false
   [markup.goldmark.renderer]
     unsafe = true
-publishDir = "docs"
