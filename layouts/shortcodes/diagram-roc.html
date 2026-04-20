@@ -1,0 +1,53 @@
+<svg viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;font-family:'JetBrains Mono',monospace;">
+  <rect width="680" height="420" rx="6" fill="#12151c"/>
+
+  <!-- Grid lines -->
+  <line x1="100" y1="40" x2="100" y2="340" stroke="#262d3f" stroke-width="1"/>
+  <line x1="100" y1="340" x2="580" y2="340" stroke="#262d3f" stroke-width="1"/>
+  <line x1="100" y1="240" x2="580" y2="240" stroke="#262d3f" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="100" y1="140" x2="580" y2="140" stroke="#262d3f" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="220" y1="40" x2="220" y2="340" stroke="#262d3f" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="340" y1="40" x2="340" y2="340" stroke="#262d3f" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="460" y1="40" x2="460" y2="340" stroke="#262d3f" stroke-width="0.5" stroke-dasharray="3,3"/>
+
+  <!-- Axis labels -->
+  <text x="340" y="388" text-anchor="middle" fill="#6b778f" font-size="11">False Positive Rate</text>
+  <text x="30" y="190" text-anchor="middle" fill="#6b778f" font-size="11" transform="rotate(-90,30,190)">True Positive Rate</text>
+
+  <!-- Tick labels x -->
+  <text x="100" y="358" text-anchor="middle" fill="#3d4557" font-size="10">0.0</text>
+  <text x="220" y="358" text-anchor="middle" fill="#3d4557" font-size="10">0.25</text>
+  <text x="340" y="358" text-anchor="middle" fill="#3d4557" font-size="10">0.5</text>
+  <text x="460" y="358" text-anchor="middle" fill="#3d4557" font-size="10">0.75</text>
+  <text x="580" y="358" text-anchor="middle" fill="#3d4557" font-size="10">1.0</text>
+
+  <!-- Tick labels y -->
+  <text x="88" y="344" text-anchor="end" fill="#3d4557" font-size="10">0.0</text>
+  <text x="88" y="244" text-anchor="end" fill="#3d4557" font-size="10">0.5</text>
+  <text x="88" y="144" text-anchor="end" fill="#3d4557" font-size="10">0.75</text>
+  <text x="88" y="44" text-anchor="end" fill="#3d4557" font-size="10">1.0</text>
+
+  <!-- AUC fill for good model -->
+  <path d="M100,340 C140,260 160,140 200,100 C240,65 300,50 340,48 C400,44 460,42 580,40 L580,340 Z"
+    fill="#ff6b35" fill-opacity="0.08"/>
+
+  <!-- Random baseline (diagonal) -->
+  <line x1="100" y1="340" x2="580" y2="40" stroke="#3d4557" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- Good model curve (AUC ~0.91) -->
+  <path d="M100,340 C140,260 160,140 200,100 C240,65 300,50 340,48 C400,44 460,42 580,40"
+    fill="none" stroke="#ff6b35" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Labels -->
+  <text x="360" y="200" fill="#3d4557" font-size="11">Random model</text>
+  <text x="362" y="214" fill="#3d4557" font-size="11">(AUC = 0.5)</text>
+
+  <text x="240" y="118" fill="#ff6b35" font-size="11">Your model</text>
+  <text x="240" y="132" fill="#ff6b35" font-size="11">(AUC = 0.91)</text>
+
+  <!-- AUC label -->
+  <text x="430" y="240" fill="#ff6b35" font-size="11" fill-opacity="0.7">AUC</text>
+
+  <!-- Title -->
+  <text x="340" y="20" text-anchor="middle" fill="#3d4557" font-size="10" letter-spacing="2">ROC CURVE · BETTER MODEL CURVES UP AND LEFT</text>
+</svg>
