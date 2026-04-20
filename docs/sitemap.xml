@@ -2,87 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/analytics/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/communication/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/lifetime-value/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/machine-learning/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/rfm/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/stakeholders/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/the-model-said-091-my-stakeholder-said-prove-it/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/classification/</loc>
-    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/retention/</loc>
-    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/roc-auc/</loc>
-    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/teaching-a-machine-who-your-best-customers-are/</loc>
-    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/not-all-users-are-your-users/</loc>
+    <loc>https://paranormaldistributions.com/posts/not-all-users-are-your-users/</loc>
     <lastmod>2026-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/segmentation/</loc>
+    <loc>https://paranormaldistributions.com/categories/analytics/</loc>
     <lastmod>2026-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/users/</loc>
+    <loc>https://paranormaldistributions.com/categories/</loc>
     <lastmod>2026-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/analytics/</loc>
+    <loc>https://paranormaldistributions.com/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/posts/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/retention/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/rfm/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/segmentation/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/users/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/analytics/</loc>
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/attribution/</loc>
+    <loc>https://paranormaldistributions.com/tags/attribution/</loc>
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/dashboards/</loc>
+    <loc>https://paranormaldistributions.com/tags/dashboards/</loc>
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/traffic/</loc>
+    <loc>https://paranormaldistributions.com/tags/traffic/</loc>
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/who-gets-the-credit-attribution/</loc>
+    <loc>https://paranormaldistributions.com/posts/who-gets-the-credit-attribution/</loc>
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/career/</loc>
+    <loc>https://paranormaldistributions.com/categories/career/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/data/</loc>
+    <loc>https://paranormaldistributions.com/tags/data/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/why-i-started-paranormal-distributions/</loc>
+    <loc>https://paranormaldistributions.com/posts/why-i-started-paranormal-distributions/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/writing/</loc>
+    <loc>https://paranormaldistributions.com/tags/writing/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://paranormaldistributions.com/about/</loc>
   </url>
 </urlset>
