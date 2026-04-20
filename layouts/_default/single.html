@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="container">
+  <article class="post">
+
+    <header class="post__header fade-up">
+      {{ with .Params.categories }}
+      <div class="post__cats">
+        {{ range . }}<span class="cat-tag">{{ . }}</span>{{ end }}
+      </div>
+      {{ end }}
+      <h1 class="post__title">{{ .Title }}</h1>
+      <div class="post__meta">
+        <span>{{ .Date.Format "January 02, 2006" }}</span>
+        <span>{{ .ReadingTime }} min read</span>
+      </div>
+      <div class="post__divider"></div>
+    </header>
+
+    <div class="post__content fade-up fade-up-2">
+      {{ .Content }}
+    </div>
+
+  </article>
+</div>
+{{ end }}

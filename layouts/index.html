@@ -1,0 +1,64 @@
+{{ define "main" }}
+<div class="container">
+
+  <section class="hero">
+    <div class="hero__label fade-up">Latest writing</div>
+    <h1 class="hero__title fade-up fade-up-1">Paranormal<br><span>Distributions</span></h1>
+    <p class="hero__desc fade-up fade-up-2">{{ .Site.Params.description }}</p>
+    <div class="hero__meta fade-up fade-up-3">{{ .Site.Params.author }} &nbsp;·&nbsp; Business Analyst, Swiggy</div>
+  </section>
+
+  <section class="posts">
+    <div class="section-label fade-up">All posts</div>
+
+    {{ $all    := .Site.RegularPages.ByDate.Reverse }}
+    {{ $pinned := where $all "Params.pinned" true }}
+    {{ $rest   := where $all "Params.pinned" "!=" true }}
+
+    {{ range $pinned }}
+    <article class="post-item post-item--pinned fade-up">
+      <div class="post-item__date">
+        {{ .Date.Format "Jan 02" }}<br>{{ .Date.Format "2006" }}
+      </div>
+      <div class="post-item__body">
+        <div class="post-item__meta-row">
+          {{ with .Params.categories }}
+          <div class="post-item__cats">
+            {{ range . }}<span class="cat-tag">{{ . }}</span>{{ end }}
+          </div>
+          {{ end }}
+          <span class="pin-badge">&#x1F4CC; pinned</span>
+        </div>
+        <h2 class="post-item__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        {{ with .Description }}<p class="post-item__desc">{{ . }}</p>{{ end }}
+      </div>
+    </article>
+    {{ end }}
+
+    {{ range $rest }}
+    <article class="post-item fade-up">
+      <div class="post-item__date">
+        {{ .Date.Format "Jan 02" }}<br>{{ .Date.Format "2006" }}
+      </div>
+      <div class="post-item__body">
+        <div class="post-item__meta-row">
+          {{ with .Params.categories }}
+          <div class="post-item__cats">
+            {{ range . }}<span class="cat-tag">{{ . }}</span>{{ end }}
+          </div>
+          {{ end }}
+        </div>
+        <h2 class="post-item__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        {{ with .Description }}<p class="post-item__desc">{{ . }}</p>{{ end }}
+      </div>
+    </article>
+    {{ else }}
+    {{ if not $pinned }}
+    <p style="color: var(--text-mute); font-family: var(--mono); font-size: 0.8rem; padding: 2rem 0;">No posts yet. First one coming soon.</p>
+    {{ end }}
+    {{ end }}
+
+  </section>
+
+</div>
+{{ end }}

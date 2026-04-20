@@ -1,0 +1,112 @@
+{{ define "main" }}
+<div class="container">
+  <div class="about-page">
+
+    <!-- Hero -->
+    <section class="about__hero fade-up">
+      <div class="about__role">Business Analyst · Swiggy Dineout</div>
+      <h1 class="about__name">Jithin K<br>Haridas</h1>
+      <p class="about__bio">{{ .Site.Params.description }}</p>
+      <div class="about__links">
+        <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener" class="about__link">
+          <span>↗</span> LinkedIn
+        </a>
+        <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener" class="about__link">
+          <span>↗</span> GitHub
+        </a>
+        <a href="mailto:{{ .Site.Params.email }}" class="about__link">
+          <span>✉</span> Email
+        </a>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills fade-up fade-up-1">
+      <div class="section-label">Stack</div>
+      <div class="skills__grid">
+
+        <div class="skill-block">
+          <div class="skill-block__label">Query & Compute</div>
+          <div class="skill-block__items">
+            <span class="skill-pill">Snowflake</span>
+            <span class="skill-pill">Databricks</span>
+            <span class="skill-pill">Spark SQL</span>
+            <span class="skill-pill">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div class="skill-block__label">Languages</div>
+          <div class="skill-block__items">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">DAX</span>
+            <span class="skill-pill">R</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div class="skill-block__label">Visualisation</div>
+          <div class="skill-block__items">
+            <span class="skill-pill">Power BI</span>
+            <span class="skill-pill">Tableau</span>
+            <span class="skill-pill">Matplotlib</span>
+            <span class="skill-pill">Seaborn</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div class="skill-block__label">Analytics</div>
+          <div class="skill-block__items">
+            <span class="skill-pill">Attribution</span>
+            <span class="skill-pill">Segmentation</span>
+            <span class="skill-pill">Funnel Analysis</span>
+            <span class="skill-pill">Anomaly Detection</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div class="skill-block__label">Tools</div>
+          <div class="skill-block__items">
+            <span class="skill-pill">AppsFlyer</span>
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">dbt</span>
+            <span class="skill-pill">Jupyter</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div class="skill-block__label">ML</div>
+          <div class="skill-block__items">
+            <span class="skill-pill">Scikit-learn</span>
+            <span class="skill-pill">XGBoost</span>
+            <span class="skill-pill">Random Forest</span>
+            <span class="skill-pill">Clustering</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact fade-up fade-up-3">
+      <div class="section-label">Contact</div>
+      <div class="contact__grid">
+        <a href="mailto:{{ .Site.Params.email }}" class="contact__item">
+          <span class="contact__dot"></span>
+          {{ .Site.Params.email }}
+        </a>
+        <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener" class="contact__item">
+          <span class="contact__dot"></span>
+          linkedin.com/in/jithinharidas
+        </a>
+        <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener" class="contact__item">
+          <span class="contact__dot"></span>
+          github.com/jithinharidas
+        </a>
+      </div>
+    </section>
+
+  </div>
+</div>
+{{ end }}

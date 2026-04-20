@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who Gets the Credit? On Attribution, Windows, and Dashboards That Lie — Paranormal Distributions</title>
+  <meta name="description" content="A concept that sounds simple until your dashboard and reality stop agreeing with each other.">
+  <meta name="author" content="Jithin K Haridas">
+  <meta property="og:title" content="Who Gets the Credit? On Attribution, Windows, and Dashboards That Lie">
+  <meta property="og:description" content="A concept that sounds simple until your dashboard and reality stop agreeing with each other.">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <meta property="article:published_time" content="2026-04-05">
+  
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__brand">
+        <span class="brand-full">paranormal-distributions</span>
+        <span class="brand-short">pd</span>
+      </a>
+      <svg class="nav-ghost" viewBox="0 0 40 50" xmlns="http://www.w3.org/2000/svg" width="18" height="22" aria-label="ghost">
+        <path class="ghost-body" d="M5 25 Q5 8 20 8 Q35 8 35 25 L35 44 Q35 44 30 40 Q27 37 25 40 Q22 43 20 40 Q18 37 15 40 Q13 43 10 40 Q5 44 5 44 Z" fill="#ff6b35" fill-opacity="0.18" stroke="#ff6b35" stroke-width="1.2" stroke-opacity="0.6"/>
+        <ellipse class="ghost-eye-l" cx="14.5" cy="24" rx="4" ry="5" fill="#ff6b35" fill-opacity="0.9"/>
+        <ellipse cx="15.5" cy="23" rx="1.5" ry="2" fill="#0d0f14"/>
+        <ellipse class="ghost-eye-r" cx="25.5" cy="24" rx="4" ry="5" fill="#ff6b35" fill-opacity="0.9"/>
+        <ellipse cx="26.5" cy="23" rx="1.5" ry="2" fill="#0d0f14"/>
+      </svg>
+      <div class="ghost-tooltip" id="ghostTooltip"></div>
+      <ul class="nav__links">
+        <li><a href="/">Posts</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  
+<div class="container">
+  <article class="post">
+
+    <header class="post__header fade-up">
+      
+      <div class="post__cats">
+        <span class="cat-tag">Analytics</span>
+      </div>
+      
+      <h1 class="post__title">Who Gets the Credit? On Attribution, Windows, and Dashboards That Lie</h1>
+      <div class="post__meta">
+        <span>April 05, 2026</span>
+        <span>5 min read</span>
+      </div>
+      <div class="post__divider"></div>
+    </header>
+
+    <div class="post__content fade-up fade-up-2">
+      <p>There&rsquo;s a meeting I&rsquo;ve sat in more than once where two teams are looking at the same campaign and arriving at completely different numbers.</p>
+<p>Team A says the campaign brought in 10,000 users. Team B says 4,000. Both are using data. Both are confident. Someone inevitably says &ldquo;can we align on a single source of truth&rdquo; and everyone nods and nothing changes.</p>
+<p>This is an attribution problem. And it&rsquo;s not a data quality problem, usually. It&rsquo;s a <em>definition</em> problem wearing a data quality costume.</p>
+<hr>
+<h2 id="the-basic-idea">The basic idea</h2>
+<p>Attribution is just answering: <em>who gets the credit?</em></p>
+<p>Say a user sees a Meta ad on Monday. Does nothing. Searches on Google Tuesday, clicks through. Sees a Criteo retargeting banner on Wednesday. Still does nothing. Gets a push notification Thursday, ignores it. Then on Friday opens the app directly: organic: and finally converts.</p>
+<div class="diagram-scroll"><svg viewBox="0 0 820 165" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;font-family:'JetBrains Mono',monospace;">
+  <rect width="820" height="165" rx="6" fill="#12151c"/>
+  <text x="410" y="22" text-anchor="middle" fill="#3d4557" font-size="10" letter-spacing="2">ONE USER · FIVE TOUCHPOINTS · WHO GETS CREDIT?</text>
+
+  
+  <line x1="40" y1="80" x2="780" y2="80" stroke="#262d3f" stroke-width="2"/>
+
+  
+  <circle cx="100" cy="80" r="22" fill="#1e2333" stroke="#ff6b35" stroke-width="2"/>
+  <text x="100" y="85" text-anchor="middle" fill="#ff6b35" font-size="9" font-weight="600">META</text>
+  <text x="100" y="113" text-anchor="middle" fill="#6b778f" font-size="9">Mon</text>
+  <text x="100" y="126" text-anchor="middle" fill="#3d4557" font-size="8">Paid Social</text>
+
+  <line x1="124" y1="80" x2="198" y2="80" stroke="#262d3f" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="198,76 206,80 198,84" fill="#262d3f"/>
+
+  
+  <circle cx="230" cy="80" r="22" fill="#1e2333" stroke="#6b778f" stroke-width="1.5"/>
+  <text x="230" y="85" text-anchor="middle" fill="#6b778f" font-size="9" font-weight="500">GOOG</text>
+  <text x="230" y="113" text-anchor="middle" fill="#6b778f" font-size="9">Tue</text>
+  <text x="230" y="126" text-anchor="middle" fill="#3d4557" font-size="8">Search</text>
+
+  <line x1="254" y1="80" x2="328" y2="80" stroke="#262d3f" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="328,76 336,80 328,84" fill="#262d3f"/>
+
+  
+  <circle cx="368" cy="80" r="22" fill="#1e2333" stroke="#6b778f" stroke-width="1.5"/>
+  <text x="368" y="85" text-anchor="middle" fill="#6b778f" font-size="9" font-weight="500">CRTEO</text>
+  <text x="368" y="113" text-anchor="middle" fill="#6b778f" font-size="9">Wed</text>
+  <text x="368" y="126" text-anchor="middle" fill="#3d4557" font-size="8">Retargeting</text>
+
+  <line x1="392" y1="80" x2="466" y2="80" stroke="#262d3f" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="466,76 474,80 466,84" fill="#262d3f"/>
+
+  
+  <circle cx="506" cy="80" r="22" fill="#1e2333" stroke="#6b778f" stroke-width="1.5"/>
+  <text x="506" y="78" text-anchor="middle" fill="#6b778f" font-size="9" font-weight="500">PUSH</text>
+  <text x="506" y="89" text-anchor="middle" fill="#6b778f" font-size="9" font-weight="500">NOTIF</text>
+  <text x="506" y="113" text-anchor="middle" fill="#6b778f" font-size="9">Thu</text>
+  <text x="506" y="126" text-anchor="middle" fill="#3d4557" font-size="8">PN</text>
+
+  <line x1="530" y1="80" x2="604" y2="80" stroke="#262d3f" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="604,76 612,80 604,84" fill="#262d3f"/>
+
+  
+  <circle cx="644" cy="80" r="22" fill="#1e2333" stroke="#6b778f" stroke-width="1.5"/>
+  <text x="644" y="85" text-anchor="middle" fill="#6b778f" font-size="9" font-weight="500">ORGN</text>
+  <text x="644" y="113" text-anchor="middle" fill="#6b778f" font-size="9">Fri</text>
+  <text x="644" y="126" text-anchor="middle" fill="#3d4557" font-size="8">Direct</text>
+
+  
+  <line x1="668" y1="80" x2="730" y2="80" stroke="#ff6b35" stroke-width="1.5"/>
+  <polygon points="730,76 738,80 730,84" fill="#ff6b35"/>
+
+  
+  <circle cx="762" cy="80" r="22" fill="#ff6b35" fill-opacity="0.15" stroke="#ff6b35" stroke-width="2"/>
+  <text x="762" y="78" text-anchor="middle" fill="#ff6b35" font-size="9" font-weight="600">CON</text>
+  <text x="762" y="89" text-anchor="middle" fill="#ff6b35" font-size="9" font-weight="600">VERT</text>
+  <text x="762" y="113" text-anchor="middle" fill="#6b778f" font-size="9">Sat</text>
+</svg></div>
+
+<p>Which channel gets the credit for that conversion?</p>
+<p>Meta will say Meta. Google will say Google. Criteo will say Criteo. The CRM team will say the push notification warmed them up. And if you&rsquo;re pulling numbers from each platform&rsquo;s own dashboard, all five will show that conversion in their reports. Your total will add up to 500% of reality.</p>
+<p>This is not a conspiracy. Each platform is applying its own attribution logic and counting what it can see. The problem is you&rsquo;re treating three different answers to three different questions as if they&rsquo;re the same answer to one question.</p>
+<hr>
+<h2 id="the-approaches-people-use">The approaches people use</h2>
+<div class="diagram-scroll"><svg viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;font-family:'JetBrains Mono',monospace;">
+  <rect width="820" height="320" rx="6" fill="#12151c"/>
+
+  <text x="410" y="26" text-anchor="middle" fill="#3d4557" font-size="10" letter-spacing="2">SAME JOURNEY · DIFFERENT CREDIT SPLITS</text>
+
+  
+  <text x="90"  y="50" text-anchor="middle" fill="#6b778f" font-size="9">MODEL</text>
+  <text x="230" y="50" text-anchor="middle" fill="#6b778f" font-size="9">META</text>
+  <text x="340" y="50" text-anchor="middle" fill="#6b778f" font-size="9">GOOGLE</text>
+  <text x="450" y="50" text-anchor="middle" fill="#6b778f" font-size="9">CRITEO</text>
+  <text x="560" y="50" text-anchor="middle" fill="#6b778f" font-size="9">PN</text>
+  <text x="680" y="50" text-anchor="middle" fill="#6b778f" font-size="9">ORGANIC</text>
+  <line x1="20" y1="56" x2="800" y2="56" stroke="#1e2333" stroke-width="1"/>
+
+  
+  <text x="90" y="80" text-anchor="middle" fill="#c8cfe0" font-size="10">Last Touch</text>
+  <rect x="180" y="66" width="100" height="18" rx="2" fill="#1e2333"/>
+  <text x="230" y="79" text-anchor="middle" fill="#3d4557" font-size="10">0%</text>
+  <rect x="290" y="66" width="100" height="18" rx="2" fill="#1e2333"/>
+  <text x="340" y="79" text-anchor="middle" fill="#3d4557" font-size="10">0%</text>
+  <rect x="400" y="66" width="100" height="18" rx="2" fill="#1e2333"/>
+  <text x="450" y="79" text-anchor="middle" fill="#3d4557" font-size="10">0%</text>
+  <rect x="510" y="66" width="100" height="18" rx="2" fill="#1e2333"/>
+  <text x="560" y="79" text-anchor="middle" fill="#3d4557" font-size="10">0%</text>
+  <rect x="630" y="66" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.75"/>
+  <text x="680" y="79" text-anchor="middle" fill="#fff" font-size="10" font-weight="600">100%</text>
+
+  
+  <text x="90" y="120" text-anchor="middle" fill="#c8cfe0" font-size="10">First Touch</text>
+  <rect x="180" y="106" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.75"/>
+  <text x="230" y="119" text-anchor="middle" fill="#fff" font-size="10" font-weight="600">100%</text>
+  <rect x="290" y="106" width="100" height="18" rx="2" fill="#1e2333"/>
+  <text x="340" y="119" text-anchor="middle" fill="#3d4557" font-size="10">0%</text>
+  <rect x="400" y="106" width="100" height="18" rx="2" fill="#1e2333"/>
+  <text x="450" y="119" text-anchor="middle" fill="#3d4557" font-size="10">0%</text>
+  <rect x="510" y="106" width="100" height="18" rx="2" fill="#1e2333"/>
+  <text x="560" y="119" text-anchor="middle" fill="#3d4557" font-size="10">0%</text>
+  <rect x="630" y="106" width="100" height="18" rx="2" fill="#1e2333"/>
+  <text x="680" y="119" text-anchor="middle" fill="#3d4557" font-size="10">0%</text>
+
+  
+  <text x="90" y="160" text-anchor="middle" fill="#c8cfe0" font-size="10">Linear</text>
+  <rect x="180" y="146" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.28"/>
+  <text x="230" y="159" text-anchor="middle" fill="#c8cfe0" font-size="10">20%</text>
+  <rect x="290" y="146" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.28"/>
+  <text x="340" y="159" text-anchor="middle" fill="#c8cfe0" font-size="10">20%</text>
+  <rect x="400" y="146" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.28"/>
+  <text x="450" y="159" text-anchor="middle" fill="#c8cfe0" font-size="10">20%</text>
+  <rect x="510" y="146" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.28"/>
+  <text x="560" y="159" text-anchor="middle" fill="#c8cfe0" font-size="10">20%</text>
+  <rect x="630" y="146" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.28"/>
+  <text x="680" y="159" text-anchor="middle" fill="#c8cfe0" font-size="10">20%</text>
+
+  
+  <text x="90" y="200" text-anchor="middle" fill="#c8cfe0" font-size="10">Time Decay</text>
+  <rect x="180" y="186" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.08"/>
+  <text x="230" y="199" text-anchor="middle" fill="#3d4557" font-size="10">5%</text>
+  <rect x="290" y="186" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.12"/>
+  <text x="340" y="199" text-anchor="middle" fill="#6b778f" font-size="10">10%</text>
+  <rect x="400" y="186" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.2"/>
+  <text x="450" y="199" text-anchor="middle" fill="#6b778f" font-size="10">15%</text>
+  <rect x="510" y="186" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.38"/>
+  <text x="560" y="199" text-anchor="middle" fill="#c8cfe0" font-size="10">30%</text>
+  <rect x="630" y="186" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.6"/>
+  <text x="680" y="199" text-anchor="middle" fill="#fff" font-size="10" font-weight="600">40%</text>
+
+  
+  <text x="90" y="240" text-anchor="middle" fill="#c8cfe0" font-size="10">Data-Driven</text>
+  <rect x="180" y="226" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.45"/>
+  <text x="230" y="239" text-anchor="middle" fill="#fff" font-size="10">35%</text>
+  <rect x="290" y="226" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.2"/>
+  <text x="340" y="239" text-anchor="middle" fill="#6b778f" font-size="10">15%</text>
+  <rect x="400" y="226" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.28"/>
+  <text x="450" y="239" text-anchor="middle" fill="#c8cfe0" font-size="10">20%</text>
+  <rect x="510" y="226" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.12"/>
+  <text x="560" y="239" text-anchor="middle" fill="#6b778f" font-size="10">10%</text>
+  <rect x="630" y="226" width="100" height="18" rx="2" fill="#ff6b35" fill-opacity="0.28"/>
+  <text x="680" y="239" text-anchor="middle" fill="#c8cfe0" font-size="10">20%</text>
+
+  <text x="410" y="298" text-anchor="middle" fill="#3d4557" font-size="9">same user · same conversion · five different answers</text>
+</svg></div>
+
+<p><strong>Last touch</strong>: whoever touched the user last gets full credit. In our example, Organic wins everything. Simple, clean, wildly unfair to Meta who started the whole thing. It&rsquo;s the equivalent of the guy who forwards a finished report to leadership and gets promoted while the analyst who built it remains invisible. (Not that this has ever happened to anyone I know.)</p>
+<p><strong>First touch</strong>: Meta gets full credit for the acquisition. Better for understanding where users are coming from. But it completely ignores Criteo&rsquo;s retargeting or the PN that kept the user engaged. Like giving your Class 1 teacher full credit for your MBA.</p>
+<p><strong>Linear</strong>: split 20% evenly across all five touchpoints. Democratic but a little naive. Meta&rsquo;s brand campaign and a Criteo banner are not doing the same job in the funnel.</p>
+<p><strong>Time decay</strong>: touchpoints closer to conversion get more credit. Organic and PN look great. Meta, who started the whole journey, gets 5%. Your top-of-funnel team will love explaining this in the next budget review.</p>
+<p><strong>Data-driven</strong>: use a model to figure out which touchpoints actually move the needle. Theoretically the best. Requires a lot of data and a lot of trust in the model. Also requires someone to explain it to a stakeholder at 10am on a Monday, which is its own category of suffering.</p>
+<hr>
+<h2 id="the-part-nobody-tells-you">The part nobody tells you</h2>
+<p>Here&rsquo;s what I&rsquo;ve noticed: the attribution model matters less than you think. What matters more is <em>consistency</em>.</p>
+<p>If you pick last-touch and stick with it, you can at least track trends over time. If you switch models every quarter because someone read an article, your historical data becomes useless and every review meeting turns into a methodology debate instead of a business conversation.</p>
+<p>Pick something defensible. Document it. Make sure everyone is pulling from the same place. That&rsquo;s 80% of the battle.</p>
+<p>The other 20% is a full-time job.</p>
+<hr>
+<h2 id="the-thing-that-actually-breaks-dashboards">The thing that actually breaks dashboards</h2>
+<p>The sneaky issue isn&rsquo;t which model you pick. It&rsquo;s the <strong>attribution window</strong>: how far back you look when deciding whether a touchpoint counts.</p>
+<p>If your window is 7 days, a user who saw your ad on day 1 and converted on day 8 gets counted as organic. If your window is 30 days, that&rsquo;s an attributed conversion. Same user, same behavior, different number on your dashboard.</p>
+<p>Now imagine two teams using different windows pulling from different platforms with different default settings. You don&rsquo;t get one source of truth. You get a choose-your-own-adventure where every team is technically correct and nobody agrees on anything.</p>
+<p>I once spent a surprisingly long time trying to figure out why two reports on the same campaign were off by about 40%. The answer was a default attribution window difference between two tools. Not a bug. Not missing data. Just two systems being very precise about slightly different questions.</p>
+<p>Anyway. That was a fun week.</p>
+<hr>
+<h2 id="so-what-do-you-do">So what do you do</h2>
+<p><strong>Define before you build.</strong> Before anyone touches a dashboard, get the team to agree on: what counts as a conversion, which touchpoints are in scope, what the attribution window is, and which tool is the system of record. Write it down. Put it somewhere people can find it. Revisit it when something breaks.</p>
+<p><strong>Don&rsquo;t fight the platform numbers, contextualize them.</strong> Google&rsquo;s numbers will always be higher than your internal numbers. That&rsquo;s expected: they&rsquo;re counting within their ecosystem. The question isn&rsquo;t &ldquo;who&rsquo;s right&rdquo; but &ldquo;what question is each number answering.&rdquo;</p>
+<p><strong>Be suspicious of round numbers.</strong> If your report shows exactly 10,000 attributed conversions, something might be capped or defaulted somewhere. Real data is rarely that tidy.</p>
+<p><strong>When two numbers disagree, find the third.</strong> If Team A and Team B are both confident and both wrong, there&rsquo;s usually a third dataset sitting quietly that resolves it. It&rsquo;s not always obvious which one, but it exists.</p>
+<hr>
+<p>Attribution doesn&rsquo;t have a correct answer. It has a <em>chosen</em> answer. The job is making sure everyone knows what was chosen and why, so the debates are at least about the right things.</p>
+<p>The meetings still happen. But at least you know what you&rsquo;re arguing about.</p>
+
+    </div>
+
+  </article>
+</div>
+
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">~/<span>paranormal-distributions</span></div>
+      <div class="footer__copy">© 2026 Jithin K Haridas</div>
+    </div>
+  </footer>
+
+  <script>
+    const ghost     = document.querySelector('.nav-ghost');
+    const nav       = document.querySelector('.nav__inner');
+    const tooltip   = document.getElementById('ghostTooltip');
+    const ghostBody = document.querySelector('.ghost-body');
+    const eyeL      = document.querySelector('.ghost-eye-l');
+    const eyeR      = document.querySelector('.ghost-eye-r');
+
+    const facts = [
+      "Benford's Law: in most real datasets, ~30% of numbers start with 1. Fraud investigators use this to catch fakes.",
+      "The average dashboard has at least one metric nobody has looked at in 6 months.",
+      "Simpson's Paradox: a trend can appear in each group of data but disappear when the groups are combined.",
+      "Google processes around 8.5 billion searches per day. Most analytics teams are still arguing about last-touch attribution.",
+      "The term 'bug' in computing comes from an actual moth found in a Harvard computer relay in 1947.",
+      "A/B tests need way more traffic than most people think. At 5% conversion, detecting a 10% lift needs ~50,000 users per variant.",
+      "Goodhart's Law: when a measure becomes a target, it ceases to be a good measure.",
+      "The first spreadsheet, VisiCalc, was released in 1979. People have been pivoting data ever since.",
+      "Survivorship bias: we study successful companies and ignore the failures. Most strategy advice is haunted by this.",
+      "The Dunning-Kruger effect was itself replicated with questionable methodology. Even the bias has bias.",
+      "Dark data: most organizations capture and store data they never actually analyze. Estimated at 80% of all data.",
+      "Regression to the mean: extreme performances tend to be followed by more average ones. This is why your 'best' campaign is hard to repeat.",
+      "The first recorded use of the word 'statistics' was in 1749. It meant 'the science of the state'.",
+      "Correlation between Nicolas Cage films and pool drownings: 0.67. Causation: definitely not.",
+      "Most data quality issues are discovered in production. At 2am. Before a Monday review.",
+    ];
+
+    let x = 130, dir = 1, tick = 0;
+    let flickerTimer = Math.floor(Math.random() * 300);
+    let isWhite = false, whiteTimer = 0;
+    let isHovered = false;
+    let lastFact = -1;
+
+    
+    ghost.style.cursor = 'pointer';
+    ghost.addEventListener('mouseenter', (e) => {
+      isHovered = true;
+      let idx;
+      do { idx = Math.floor(Math.random() * facts.length); } while (idx === lastFact);
+      lastFact = idx;
+      tooltip.textContent = facts[idx];
+      tooltip.classList.add('visible');
+      positionTooltip(e);
+    });
+    ghost.addEventListener('mousemove', positionTooltip);
+    ghost.addEventListener('mouseleave', () => {
+      isHovered = false;
+      tooltip.classList.remove('visible');
+    });
+
+    function positionTooltip(e) {
+      const navRect = nav.getBoundingClientRect();
+      const tx = parseFloat(ghost.style.left || 0);
+      tooltip.style.left = Math.min(tx, nav.offsetWidth - 260) + 'px';
+      tooltip.style.top = '110%';
+    }
+
+    function setGhostColor(white) {
+      const bodyFill   = white ? 'rgba(255,255,255,0.15)' : 'rgba(255,107,53,0.18)';
+      const bodyStroke = white ? 'rgba(255,255,255,0.5)'  : 'rgba(255,107,53,0.6)';
+      const eyeFill    = white ? 'rgba(255,255,255,0.95)' : 'rgba(255,107,53,0.9)';
+      ghostBody.setAttribute('fill', bodyFill);
+      ghostBody.setAttribute('stroke', bodyStroke);
+      eyeL.setAttribute('fill', eyeFill);
+      eyeR.setAttribute('fill', eyeFill);
+    }
+
+    function animate() {
+      tick++;
+      flickerTimer++;
+      if (isWhite) whiteTimer++;
+
+      if (!isHovered) {
+        x += 0.35 * dir;
+        const navW = nav.offsetWidth;
+        if (x > navW - 160) { dir = -1; ghost.style.transform = 'scaleX(-1)'; }
+        if (x < 130)        { dir =  1; ghost.style.transform = 'scaleX(1)'; }
+      }
+
+      const y = Math.sin(tick * 0.04) * 3;
+      let opacity = 0.72;
+      let filter  = 'drop-shadow(0 0 3px rgba(255,107,53,0.25))';
+
+      
+      if (!isWhite && flickerTimer > 280 && Math.random() < 0.008) {
+        isWhite = true;
+        whiteTimer = 0;
+        setGhostColor(true);
+      }
+      if (isWhite) {
+        filter  = 'drop-shadow(0 0 10px rgba(255,107,53,0.9)) drop-shadow(0 0 4px rgba(255,255,255,0.6))';
+        opacity = 0.95;
+        if (whiteTimer > 90) { isWhite = false; setGhostColor(false); }
+      }
+
+      
+      if (!isWhite && flickerTimer > 200 && flickerTimer < 206) {
+        opacity = flickerTimer % 2 === 0 ? 0.1 : 0.9;
+        filter  = 'drop-shadow(0 0 8px rgba(255,107,53,0.8))';
+      }
+      if (flickerTimer > 400) flickerTimer = 0;
+
+      ghost.style.position  = 'absolute';
+      ghost.style.left      = x + 'px';
+      ghost.style.top       = '50%';
+      ghost.style.marginTop = (y - 11) + 'px';
+      ghost.style.opacity   = isHovered ? 1 : opacity;
+      ghost.style.filter    = isHovered ? 'drop-shadow(0 0 10px rgba(255,107,53,0.9))' : filter;
+
+      requestAnimationFrame(animate);
+    }
+
+    nav.style.position = 'relative';
+    ghost.style.pointerEvents = 'auto';
+    animate();
+  </script>
+
+</body>
+</html>

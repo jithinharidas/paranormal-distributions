@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Paranormal Distributions</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Paranormal Distributions</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Retention</title>
+      <link>http://localhost:1313/tags/retention/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/retention/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rfm</title>
+      <link>http://localhost:1313/tags/rfm/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rfm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Segmentation</title>
+      <link>http://localhost:1313/tags/segmentation/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/segmentation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Users</title>
+      <link>http://localhost:1313/tags/users/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/users/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Analytics</title>
+      <link>http://localhost:1313/tags/analytics/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/analytics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Attribution</title>
+      <link>http://localhost:1313/tags/attribution/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/attribution/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dashboards</title>
+      <link>http://localhost:1313/tags/dashboards/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/dashboards/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Traffic</title>
+      <link>http://localhost:1313/tags/traffic/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/traffic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data</title>
+      <link>http://localhost:1313/tags/data/</link>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/data/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Writing</title>
+      <link>http://localhost:1313/tags/writing/</link>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/writing/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,41 @@
+{{ define "main" }}
+<div class="container">
+
+  <section class="hero fade-up">
+    <div class="hero__label">Latest writing</div>
+    <h1 class="hero__title">Paranormal<br><span>Distributions</span></h1>
+    <p class="hero__desc">{{ .Site.Params.description }}</p>
+    <div class="hero__meta">{{ .Site.Params.author }} &nbsp;·&nbsp; Data Analyst, Swiggy</div>
+  </section>
+
+  <section class="posts">
+    <div class="section-label">All posts</div>
+
+    {{ range .Pages }}
+    <article class="post-item fade-up">
+      <div class="post-item__date">
+        {{ .Date.Format "Jan 02" }}<br>{{ .Date.Format "2006" }}
+      </div>
+      <div class="post-item__body">
+        {{ with .Params.categories }}
+        <div class="post-item__cats">
+          {{ range . }}<span class="cat-tag">{{ . }}</span>{{ end }}
+        </div>
+        {{ end }}
+        <h2 class="post-item__title">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h2>
+        {{ with .Description }}
+        <p class="post-item__desc">{{ . }}</p>
+        {{ end }}
+      </div>
+    </article>
+    {{ else }}
+    <p style="color: var(--text-mute); font-family: var(--mono); font-size: 0.8rem;">No posts yet. Check back soon.</p>
+    {{ end }}
+  </section>
+
+  {{ template "_internal/pagination.html" . }}
+
+</div>
+{{ end }}
