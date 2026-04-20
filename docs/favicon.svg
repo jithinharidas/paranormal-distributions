@@ -1,7 +1,6 @@
 <svg width="680" height="680" viewBox="0 0 680 680" xmlns="http://www.w3.org/2000/svg">
-  <rect width="680" height="680" fill="#0d0f14" rx="80"/>
 
-  <!-- Ghost body -->
+  <!-- Ghost body - solid orange, transparent background -->
   <path
     d="
       M 150 570
@@ -23,30 +22,25 @@
       Z
     "
     fill="#ff6b35"
-    fill-opacity="0.12"
     stroke="#ff6b35"
     stroke-width="11"
     stroke-linejoin="round"
   />
 
-  <!-- Left eye -->
-  <ellipse fill="#ff6b35" cx="278" cy="370" rx="36" ry="44"/>
-  <ellipse fill="#0d0f14" cx="286" cy="364" rx="14" ry="18"/>
-  <text font-family="monospace" fill="#0d0f14" font-size="38" font-weight="bold" x="278" y="385" text-anchor="middle">σ</text>
+  <!-- Left eye: { -->
+  <text font-family="monospace" fill="#0d0f14" font-size="90" font-weight="bold" x="278" y="400" text-anchor="middle">{</text>
 
-  <!-- Right eye -->
-  <ellipse fill="#ff6b35" cx="402" cy="370" rx="36" ry="44"/>
-  <ellipse fill="#0d0f14" cx="410" cy="364" rx="14" ry="18"/>
-  <text font-family="monospace" fill="#0d0f14" font-size="38" font-weight="bold" x="402" y="385" text-anchor="middle">σ</text>
+  <!-- Right eye: } -->
+  <text font-family="monospace" fill="#0d0f14" font-size="90" font-weight="bold" x="402" y="400" text-anchor="middle">}</text>
 
   <!-- x axis -->
-  <line x1="90" y1="578" x2="610" y2="578" stroke="#ff6b35" stroke-width="3" stroke-opacity="0.3"/>
-  <polygon points="610,571 626,578 610,585" fill="#ff6b35" fill-opacity="0.3"/>
+  <line x1="90" y1="578" x2="610" y2="578" stroke="#ff6b35" stroke-width="8"/>
+  <polygon points="610,568 630,578 610,588" fill="#ff6b35"/>
 
   <!-- y axis -->
-  <line x1="108" y1="590" x2="108" y2="90" stroke="#ff6b35" stroke-width="3" stroke-opacity="0.3"/>
-  <polygon points="101,90 108,74 115,90" fill="#ff6b35" fill-opacity="0.3"/>
+  <line x1="108" y1="595" x2="108" y2="90" stroke="#ff6b35" stroke-width="8"/>
+  <polygon points="98,90 108,70 118,90" fill="#ff6b35"/>
 
   <!-- Formula -->
-  <text font-family="monospace" fill="#ff6b35" font-size="24" x="118" y="75" text-anchor="start">h(x) = ghost(x)</text>
+  <text font-family="monospace" fill="#ff6b35" font-size="24" x="118" y="72" text-anchor="start">h(x) = ghost(x)</text>
 </svg>
