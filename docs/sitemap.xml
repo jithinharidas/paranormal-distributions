@@ -2,31 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://paranormaldistributions.com/categories/analytics/</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/categories/</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/classification/</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/machine-learning/</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/posts/</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/retention/</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/rfm/</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/roc-auc/</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/posts/teaching-a-machine-who-your-best-customers-are/</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://paranormaldistributions.com/posts/not-all-users-are-your-users/</loc>
     <lastmod>2026-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/categories/analytics/</loc>
-    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/categories/</loc>
-    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/</loc>
-    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/posts/</loc>
-    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/tags/retention/</loc>
-    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/tags/rfm/</loc>
-    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://paranormaldistributions.com/tags/segmentation/</loc>
-    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/tags/</loc>
     <lastmod>2026-04-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://paranormaldistributions.com/tags/users/</loc>
