@@ -3,13 +3,13 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stakeholders — Paranormal Distributions</title>
-  <link rel="canonical" href="http://localhost:1313/tags/stakeholders/">
-  <meta name="description" content="I find patterns in places they shouldn&#39;t exist. Business Analyst at Swiggy by day, chasing paranormal distributions by night.">
+  <title>The Metric That Looked Fine Until It Wasn&#39;t — Paranormal Distributions</title>
+  <link rel="canonical" href="http://localhost:1313/posts/the-metric-that-looked-fine-until-it-wasnt/">
+  <meta name="description" content="The metric dropped 40%. You were right to panic. Except you weren&#39;t. On sanity checking numbers before you tell anyone about them.">
   <meta name="author" content="Jithin K Haridas">
-  <meta property="og:title" content="Stakeholders">
-  <meta property="og:description" content="I find patterns in places they shouldn&#39;t exist. Business Analyst at Swiggy by day, chasing paranormal distributions by night.">
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Metric That Looked Fine Until It Wasn&#39;t">
+  <meta property="og:description" content="The metric dropped 40%. You were right to panic. Except you weren&#39;t. On sanity checking numbers before you tell anyone about them.">
+  <meta property="og:type" content="article">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
@@ -19,6 +19,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="/css/main.css">
+  
+  <meta property="article:published_time" content="2026-05-10">
   
 </head>
 <body>
@@ -46,41 +48,71 @@
 
   
 <div class="container">
+  <article class="post">
 
-  <section class="hero fade-up">
-    <div class="hero__label">Latest writing</div>
-    <h1 class="hero__title">Paranormal<br><span>Distributions</span></h1>
-    <p class="hero__desc">I find patterns in places they shouldn&#39;t exist. Business Analyst at Swiggy by day, chasing paranormal distributions by night.</p>
-    <div class="hero__meta">Jithin K Haridas &nbsp;·&nbsp; Data Analyst, Swiggy</div>
-  </section>
-
-  <section class="posts">
-    <div class="section-label">All posts</div>
-
-    
-    <article class="post-item fade-up">
-      <div class="post-item__date">
-        May 03<br>2026
+    <header class="post__header fade-up">
+      
+      <div class="post__cats">
+        <span class="cat-tag">Analytics</span>
       </div>
-      <div class="post-item__body">
-        
-        <div class="post-item__cats">
-          <span class="cat-tag">Analytics</span>
-        </div>
-        
-        <h2 class="post-item__title">
-          <a href="http://localhost:1313/posts/the-model-said-091-my-stakeholder-said-prove-it/">The Model Said 0.91. My Stakeholder Said Prove It.</a>
-        </h2>
-        
-        <p class="post-item__desc">AUC is for you. Revenue per cohort is for them. Both are true. Only one lands in a meeting.</p>
-        
+      
+      <h1 class="post__title">The Metric That Looked Fine Until It Wasn&#39;t</h1>
+      <div class="post__meta">
+        <span>May 10, 2026</span>
+        <span>4 min read</span>
       </div>
-    </article>
-    
-  </section>
+      <div class="post__divider"></div>
+    </header>
 
-  
+    <div class="post__content fade-up fade-up-2">
+      <p>The dashboard showed a 40% drop in sessions overnight.</p>
+<p>You checked it once. You checked it again. You opened another tab and checked the same number from a different report. Still 40%. You sent a message to your team. Someone called it a P1. A meeting got scheduled for 9am.</p>
+<p>The answer, when it came, was that the previous Sunday was a long weekend in three cities. Sessions always drop on long weekends. They had dropped the same amount the month before. Nobody had panicked then because nobody had been watching that closely.</p>
+<p>This is not a story about incompetence. This is a story about what happens when you look at a number without enough context to know what it means.</p>
+<hr>
+<h2 id="the-problem-with-percentage-changes">The problem with percentage changes</h2>
+<p>A 40% drop sounds catastrophic. Whether it actually is depends entirely on what you are comparing it to and what the baseline variation looks like.</p>
+<p>If your metric swings 30% week on week on a normal week, a 40% drop is worth a second look but not a P1. If your metric is stable within 5% week on week, a 40% drop is genuinely alarming.</p>
+<p>The number alone tells you nothing. The number in context tells you everything.</p>
+<p>This is why the first question when something looks wrong is never &ldquo;what happened&rdquo; but &ldquo;is this actually wrong.&rdquo;</p>
+<div style="margin: 2rem auto; max-width: 820px;">
+  <img src="/images/anomaly-zoom.gif" alt="The same metric drop looks catastrophic zoomed in to 7 days and completely normal zoomed out to 30 days" style="width:100%; border-radius:6px; display:block;">
+  <p style="font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:#3d4557; text-align:center; margin-top:0.5rem; letter-spacing:0.05em;">SAME DATA · DIFFERENT CONTEXT · DIFFERENT STORY</p>
+</div>
 
+<p>The chart above shows the same data at two zoom levels. Zoomed in to 7 days, it looks like a disaster. Zoomed out to 30 days, it looks like a Tuesday.</p>
+<hr>
+<h2 id="the-usual-suspects">The usual suspects</h2>
+<p>Before you escalate anything, run through this list. In roughly the order you should check them.</p>
+<p><strong>Day of week effect.</strong> Most metrics have a weekly pattern. Sessions are lower on weekends. Orders spike on paydays. If your drop happened on a Sunday, check what last Sunday looked like before assuming something broke.</p>
+<p><strong>Public holidays and events.</strong> One long weekend can halve your daily numbers in certain cities. If you are looking at city-level data this is even more pronounced. Always check the calendar before checking the code.</p>
+<p><strong>Denominator shift.</strong> A conversion rate drop can mean fewer conversions. It can also mean more sessions with the same conversions. The rate went down but nothing actually got worse. Check both the numerator and denominator separately before reading the combined metric.</p>
+<p><strong>Data pipeline lag.</strong> Some metrics take time to fully populate. Yesterday&rsquo;s numbers at 8am are not the same as yesterday&rsquo;s numbers at 6pm. If you are looking at recent data, check whether the pipeline has finished running.</p>
+<p><strong>Report filter change.</strong> Someone changed a filter somewhere. A date range got shifted. A segment got accidentally applied. These things happen more often than anyone admits. Check whether the query or report definition changed recently.</p>
+<hr>
+<h2 id="the-three-questions">The three questions</h2>
+<p>Before you tell anyone about an anomaly, ask yourself three things.</p>
+<p><strong>Is this comparison fair?</strong> Are you comparing like for like? Same day of week, same time period, no holidays or events in the mix?</p>
+<p><strong>Is this outside normal variation?</strong> What does the metric usually look like over 30 days? Is this drop within the range of normal swings, or genuinely outside it?</p>
+<p><strong>Does it show up in related metrics?</strong> If sessions dropped 40%, did orders also drop? Did conversion rate hold steady? A real problem usually shows up in more than one place. An artefact usually does not.</p>
+<p>If you can answer all three and the number still looks wrong, then it is probably worth escalating. If any of the three has a simple explanation, resolve that first.</p>
+<hr>
+<h2 id="when-it-actually-is-real">When it actually is real</h2>
+<p>All of the above assumes the anomaly has an innocent explanation. Sometimes it does not.</p>
+<p>A real problem tends to have a few characteristics. It shows up across multiple metrics, not just one. It does not have an obvious calendar explanation. It started at a specific point in time that corresponds to something — a deployment, a campaign launch, a partner integration change.</p>
+<p>The investigation process is the same either way. You are just looking for a different answer at the end.</p>
+<p>The difference between a false alarm and a real incident is not in how you investigate. It is in what you find.</p>
+<hr>
+<h2 id="the-thing-i-want-you-to-remember">The thing I want you to remember</h2>
+<p>Being wrong about a number being wrong is still being wrong.</p>
+<p>Escalating a false alarm costs time, credibility, and meeting slots that nobody gets back. The analyst who called three P1s that turned out to be long weekends will find that people stop taking the fourth one seriously.</p>
+<p>The sanity check is not pessimism. It is the thing that makes your actual alerts meaningful.</p>
+<p>When you have done the checklist and the number is still wrong, people will believe you. Because you are the person who checks before they speak.</p>
+<p>The metric looked fine until it wasn&rsquo;t. Make sure you know which one you are dealing with before you tell anyone about it.</p>
+
+    </div>
+
+  </article>
 </div>
 
 

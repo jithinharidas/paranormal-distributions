@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anomaly Detection on Paranormal Distributions</title>
+    <link>http://localhost:1313/tags/anomaly-detection/</link>
+    <description>Recent content in Anomaly Detection on Paranormal Distributions</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/anomaly-detection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Metric That Looked Fine Until It Wasn&#39;t</title>
+      <link>http://localhost:1313/posts/the-metric-that-looked-fine-until-it-wasnt/</link>
+      <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/the-metric-that-looked-fine-until-it-wasnt/</guid>
+      <description>&lt;p&gt;The dashboard showed a 40% drop in sessions overnight.&lt;/p&gt;&#xA;&lt;p&gt;You checked it once. You checked it again. You opened another tab and checked the same number from a different report. Still 40%. You sent a message to your team. Someone called it a P1. A meeting got scheduled for 9am.&lt;/p&gt;&#xA;&lt;p&gt;The answer, when it came, was that the previous Sunday was a long weekend in three cities. Sessions always drop on long weekends. They had dropped the same amount the month before. Nobody had panicked then because nobody had been watching that closely.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
