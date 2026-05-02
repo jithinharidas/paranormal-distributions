@@ -20,6 +20,68 @@
   --max-wide:  1100px;
 }
 
+/* ── Light mode ── */
+body.light {
+  --bg:        #f8f6f1;
+  --bg2:       #f0ede6;
+  --bg3:       #e8e4db;
+  --surface:   #ffffff;
+  --border:    #d8d2c8;
+  --text:      #2a2a3a;
+  --text-dim:  #5a5a7a;
+  --text-mute: #9a94a8;
+  --white:     #1a1a2e;
+}
+
+body.light::before { opacity: 0.15; }
+
+body.light .nav {
+  background: rgba(248, 246, 241, 0.88);
+  border-bottom-color: var(--border);
+}
+
+body.light .nav__brand { color: var(--white); }
+body.light .post-item { border-color: var(--border); }
+body.light .post-item:hover { border-color: var(--accent); }
+body.light .skill-pill { background: var(--bg2); border-color: var(--border); color: var(--text-dim); }
+body.light .skill-block { background: var(--bg2); }
+body.light .project-card { background: var(--bg2); border-color: var(--border); }
+body.light .contact__item { border-color: var(--border); }
+body.light .ghost-tooltip { background: var(--surface); }
+body.light .post__content code { background: var(--bg2); border-color: var(--border); }
+body.light .post__content pre { background: var(--bg2); border-color: var(--border); }
+body.light .post__content blockquote { background: var(--bg2); }
+body.light .how-i-write__content { border-color: var(--border); }
+
+/* ── Theme toggle button ── */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--text-mute);
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.theme-toggle svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
