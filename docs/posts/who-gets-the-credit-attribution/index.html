@@ -12,19 +12,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
-
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="/css/main.css">
-
   
-  <meta property="article:published_time" content="2026-04-05">
+  <meta property="article:published_time" content="2026-04-05T00:00:00Z">
   
 </head>
 <body>
+
+  <script>
+    
+    (function() {
+      const saved = localStorage.getItem('pd-theme');
+      if (saved === 'light') {
+        document.body.classList.add('light');
+      }
+    })();
+  </script>
 
   <nav class="nav">
     <div class="nav__inner">
@@ -62,15 +70,6 @@
       </button>
     </div>
   </nav>
-
-  <script>
-    (function() {
-      const saved = localStorage.getItem('pd-theme');
-      if (saved === 'light') {
-        document.body.classList.add('light');
-      }
-    })();
-  </script>
 
   
 <div class="container">
