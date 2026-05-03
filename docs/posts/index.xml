@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Paranormal Distributions</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://paranormaldistributions.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Model Said 0.91. My Stakeholder Said Prove It.</title>
+      <link>https://paranormaldistributions.com/posts/the-model-said-091-my-stakeholder-said-prove-it/</link>
+      <pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://paranormaldistributions.com/posts/the-model-said-091-my-stakeholder-said-prove-it/</guid>
+      <description>&lt;p&gt;You built the model. You checked the AUC. 0.91. You have read the &lt;a href=&#34;https://paranormaldistributions.com/posts/teaching-a-machine-who-your-best-customers-are/&#34;&gt;previous post&lt;/a&gt; so you know that is a good number. You walk into the room feeling good about yourself.&lt;/p&gt;&#xA;&lt;p&gt;The first question is: &amp;ldquo;what does 0.91 mean?&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;You explain it. The one who churned vs the one who did not, the model ranks them correctly 91% of the time. You can see from the face across the table that this has not landed. Not because they are not smart. Because 0.91 is your number, not theirs. You are speaking a language they did not ask to learn.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Teaching a Machine Who Your Best Customers Are</title>
       <link>https://paranormaldistributions.com/posts/teaching-a-machine-who-your-best-customers-are/</link>

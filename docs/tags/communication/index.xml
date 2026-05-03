@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Communication on Paranormal Distributions</title>
-    <link>http://localhost:1313/tags/communication/</link>
+    <link>https://paranormaldistributions.com/tags/communication/</link>
     <description>Recent content in Communication on Paranormal Distributions</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/communication/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://paranormaldistributions.com/tags/communication/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Model Said 0.91. My Stakeholder Said Prove It.</title>
-      <link>http://localhost:1313/posts/the-model-said-091-my-stakeholder-said-prove-it/</link>
+      <link>https://paranormaldistributions.com/posts/the-model-said-091-my-stakeholder-said-prove-it/</link>
       <pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/the-model-said-091-my-stakeholder-said-prove-it/</guid>
-      <description>&lt;p&gt;You built the model. You checked the AUC. 0.91. You have read the &lt;a href=&#34;http://localhost:1313/posts/teaching-a-machine-who-your-best-customers-are/&#34;&gt;previous post&lt;/a&gt; so you know that is a good number. You walk into the room feeling good about yourself.&lt;/p&gt;&#xA;&lt;p&gt;The first question is: &amp;ldquo;what does 0.91 mean?&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;You explain it. The one who churned vs the one who did not, the model ranks them correctly 91% of the time. You can see from the face across the table that this has not landed. Not because they are not smart. Because 0.91 is your number, not theirs. You are speaking a language they did not ask to learn.&lt;/p&gt;</description>
+      <guid>https://paranormaldistributions.com/posts/the-model-said-091-my-stakeholder-said-prove-it/</guid>
+      <description>&lt;p&gt;You built the model. You checked the AUC. 0.91. You have read the &lt;a href=&#34;https://paranormaldistributions.com/posts/teaching-a-machine-who-your-best-customers-are/&#34;&gt;previous post&lt;/a&gt; so you know that is a good number. You walk into the room feeling good about yourself.&lt;/p&gt;&#xA;&lt;p&gt;The first question is: &amp;ldquo;what does 0.91 mean?&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;You explain it. The one who churned vs the one who did not, the model ranks them correctly 91% of the time. You can see from the face across the table that this has not landed. Not because they are not smart. Because 0.91 is your number, not theirs. You are speaking a language they did not ask to learn.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
