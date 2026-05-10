@@ -43,7 +43,7 @@ Days since last order. Total number of orders. Average order value. Whether the 
 
 A newer user with low frequency is normal. An older user with low frequency is a signal. The model learns to tell the difference.
 
-You can add more — what channel the user came from, what time of day they usually order, whether they used a discount on their last order. The general principle is to give the model everything you know that might be relevant, and let it figure out which things actually matter. It is surprisingly good at this.
+You can add more, like what channel the user came from, what time of day they usually order, whether they used a discount on their last order. The general principle is to give the model everything you know that might be relevant, and let it figure out which things actually matter. It is surprisingly good at this.
 
 ---
 

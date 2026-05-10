@@ -3,10 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://paranormaldistributions.com/categories/analytics/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/anomaly-detection/</loc>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://paranormaldistributions.com/categories/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/dashboards/</loc>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/data-quality/</loc>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/metrics/</loc>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/</loc>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/posts/</loc>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/</loc>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/posts/the-metric-that-looked-fine-until-it-wasnt/</loc>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://paranormaldistributions.com/tags/communication/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
@@ -17,19 +41,10 @@
     <loc>https://paranormaldistributions.com/tags/machine-learning/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/posts/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://paranormaldistributions.com/tags/rfm/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://paranormaldistributions.com/tags/stakeholders/</loc>
-    <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/tags/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://paranormaldistributions.com/posts/the-model-said-091-my-stakeholder-said-prove-it/</loc>
@@ -60,9 +75,6 @@
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://paranormaldistributions.com/tags/attribution/</loc>
-    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/tags/dashboards/</loc>
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://paranormaldistributions.com/tags/traffic/</loc>

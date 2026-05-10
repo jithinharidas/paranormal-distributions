@@ -67,7 +67,7 @@ If you can answer all three and the number still looks wrong, then it is probabl
 
 All of the above assumes the anomaly has an innocent explanation. Sometimes it does not.
 
-A real problem tends to have a few characteristics. It shows up across multiple metrics, not just one. It does not have an obvious calendar explanation. It started at a specific point in time that corresponds to something — a deployment, a campaign launch, a partner integration change.
+A real problem tends to have a few characteristics. It shows up across multiple metrics, not just one. It does not have an obvious calendar explanation. It started at a specific point in time that corresponds to something: a deployment, a campaign launch, a partner integration change.
 
 The investigation process is the same either way. You are just looking for a different answer at the end.
 
