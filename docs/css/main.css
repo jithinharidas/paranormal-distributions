@@ -16,8 +16,8 @@
   --display:   'Syne', sans-serif;
   --body:      'Lora', serif;
   --radius:    4px;
-  --max:       720px;
-  --max-wide:  1100px;
+  --max:       900px;
+  --max-wide:  1200px;
 }
 
 /* ── Light mode ── */
@@ -154,6 +154,7 @@ img { max-width: 100%; display: block; }
   gap: 2rem;
   list-style: none;
   margin-left: auto;
+  margin-right: 1.25rem;
 }
 
 .nav__links a {
