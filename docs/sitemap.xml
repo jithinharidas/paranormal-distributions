@@ -2,13 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://paranormaldistributions.com/tags/bias/</loc>
+    <lastmod>2026-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/categories/</loc>
+    <lastmod>2026-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/data-thinking/</loc>
+    <lastmod>2026-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/human-behaviour/</loc>
+    <lastmod>2026-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/</loc>
+    <lastmod>2026-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/patterns/</loc>
+    <lastmod>2026-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/posts/</loc>
+    <lastmod>2026-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/categories/statistics/</loc>
+    <lastmod>2026-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/tags/</loc>
+    <lastmod>2026-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paranormaldistributions.com/posts/we-are-pattern-machines/</loc>
+    <lastmod>2026-05-16T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://paranormaldistributions.com/categories/analytics/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://paranormaldistributions.com/tags/anomaly-detection/</loc>
-    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/categories/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://paranormaldistributions.com/tags/dashboards/</loc>
@@ -18,15 +45,6 @@
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://paranormaldistributions.com/tags/metrics/</loc>
-    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/</loc>
-    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/posts/</loc>
-    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/tags/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://paranormaldistributions.com/posts/the-metric-that-looked-fine-until-it-wasnt/</loc>
