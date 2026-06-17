@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Funnels on Paranormal Distributions</title>
-		<link>http://localhost:51043/tags/funnels/</link>
+		<link>https://paranormaldistributions.com/tags/funnels/</link>
 		<description>Recent content in Funnels on Paranormal Distributions</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Sat, 30 May 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:51043/tags/funnels/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://paranormaldistributions.com/tags/funnels/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>The Leaky Bucket Problem</title>
-				<link>http://localhost:51043/posts/the-leaky-bucket-problem/</link>
+				<link>https://paranormaldistributions.com/posts/the-leaky-bucket-problem/</link>
 				<pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/posts/the-leaky-bucket-problem/</guid>
+				<guid>https://paranormaldistributions.com/posts/the-leaky-bucket-problem/</guid>
 				<description>&lt;p&gt;You open Swiggy. You are hungry.&lt;/p&gt;&#xA;&lt;p&gt;You scroll through restaurants. You click on one. You look at the menu. You add something to cart. You see the delivery fee. You look at the total. You close the app and eat whatever is in the fridge.&lt;/p&gt;&#xA;&lt;p&gt;This happens millions of times a day. And somewhere in a dashboard, it shows up as a drop in the funnel.&lt;/p&gt;&#xA;&lt;p&gt;That entire sequence — open, browse, click, add, checkout, order — is a funnel. The question that matters is not how many people ordered. It is at which step most of them left.&lt;/p&gt;</description>
 			</item>
 	</channel>

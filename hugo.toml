@@ -6,7 +6,7 @@ enableRobotsTXT = true
 publishDir = "docs"
 
 [params]
-  description = "I find patterns in places they shouldn't exist. Business Analyst at Swiggy by day, chasing paranormal distributions by night."
+  description = "I find patterns in places they shouldn't exist. Business Analyst at Snabbit. Previously Swiggy Dineout. Chasing paranormal distributions by night."
   author = "Jithin K Haridas"
   github = "https://github.com/jithinharidas"
   linkedin = "https://www.linkedin.com/in/jithinharidas"

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Tags on Paranormal Distributions</title>
-		<link>http://localhost:51043/tags/</link>
+		<link>https://paranormaldistributions.com/tags/</link>
 		<description>Recent content in Tags on Paranormal Distributions</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
@@ -12,229 +12,229 @@
 		
 			<lastBuildDate>Wed, 17 Jun 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:51043/tags/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://paranormaldistributions.com/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Analyst</title>
-				<link>http://localhost:51043/tags/analyst/</link>
+				<link>https://paranormaldistributions.com/tags/analyst/</link>
 				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/analyst/</guid>
+				<guid>https://paranormaldistributions.com/tags/analyst/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Case Study</title>
-				<link>http://localhost:51043/tags/case-study/</link>
+				<link>https://paranormaldistributions.com/tags/case-study/</link>
 				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/case-study/</guid>
+				<guid>https://paranormaldistributions.com/tags/case-study/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Guesstimate</title>
-				<link>http://localhost:51043/tags/guesstimate/</link>
+				<link>https://paranormaldistributions.com/tags/guesstimate/</link>
 				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/guesstimate/</guid>
+				<guid>https://paranormaldistributions.com/tags/guesstimate/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Interview</title>
-				<link>http://localhost:51043/tags/interview/</link>
+				<link>https://paranormaldistributions.com/tags/interview/</link>
 				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/interview/</guid>
+				<guid>https://paranormaldistributions.com/tags/interview/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Sql</title>
-				<link>http://localhost:51043/tags/sql/</link>
+				<link>https://paranormaldistributions.com/tags/sql/</link>
 				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/sql/</guid>
+				<guid>https://paranormaldistributions.com/tags/sql/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Conversion</title>
-				<link>http://localhost:51043/tags/conversion/</link>
+				<link>https://paranormaldistributions.com/tags/conversion/</link>
 				<pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/conversion/</guid>
+				<guid>https://paranormaldistributions.com/tags/conversion/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Funnels</title>
-				<link>http://localhost:51043/tags/funnels/</link>
+				<link>https://paranormaldistributions.com/tags/funnels/</link>
 				<pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/funnels/</guid>
+				<guid>https://paranormaldistributions.com/tags/funnels/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Product Analytics</title>
-				<link>http://localhost:51043/tags/product-analytics/</link>
+				<link>https://paranormaldistributions.com/tags/product-analytics/</link>
 				<pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/product-analytics/</guid>
+				<guid>https://paranormaldistributions.com/tags/product-analytics/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>User Behaviour</title>
-				<link>http://localhost:51043/tags/user-behaviour/</link>
+				<link>https://paranormaldistributions.com/tags/user-behaviour/</link>
 				<pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/user-behaviour/</guid>
+				<guid>https://paranormaldistributions.com/tags/user-behaviour/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Bias</title>
-				<link>http://localhost:51043/tags/bias/</link>
+				<link>https://paranormaldistributions.com/tags/bias/</link>
 				<pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/bias/</guid>
+				<guid>https://paranormaldistributions.com/tags/bias/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Data Thinking</title>
-				<link>http://localhost:51043/tags/data-thinking/</link>
+				<link>https://paranormaldistributions.com/tags/data-thinking/</link>
 				<pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/data-thinking/</guid>
+				<guid>https://paranormaldistributions.com/tags/data-thinking/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Human Behaviour</title>
-				<link>http://localhost:51043/tags/human-behaviour/</link>
+				<link>https://paranormaldistributions.com/tags/human-behaviour/</link>
 				<pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/human-behaviour/</guid>
+				<guid>https://paranormaldistributions.com/tags/human-behaviour/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Patterns</title>
-				<link>http://localhost:51043/tags/patterns/</link>
+				<link>https://paranormaldistributions.com/tags/patterns/</link>
 				<pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/patterns/</guid>
+				<guid>https://paranormaldistributions.com/tags/patterns/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Anomaly Detection</title>
-				<link>http://localhost:51043/tags/anomaly-detection/</link>
+				<link>https://paranormaldistributions.com/tags/anomaly-detection/</link>
 				<pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/anomaly-detection/</guid>
+				<guid>https://paranormaldistributions.com/tags/anomaly-detection/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Dashboards</title>
-				<link>http://localhost:51043/tags/dashboards/</link>
+				<link>https://paranormaldistributions.com/tags/dashboards/</link>
 				<pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/dashboards/</guid>
+				<guid>https://paranormaldistributions.com/tags/dashboards/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Data Quality</title>
-				<link>http://localhost:51043/tags/data-quality/</link>
+				<link>https://paranormaldistributions.com/tags/data-quality/</link>
 				<pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/data-quality/</guid>
+				<guid>https://paranormaldistributions.com/tags/data-quality/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Metrics</title>
-				<link>http://localhost:51043/tags/metrics/</link>
+				<link>https://paranormaldistributions.com/tags/metrics/</link>
 				<pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/metrics/</guid>
+				<guid>https://paranormaldistributions.com/tags/metrics/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Communication</title>
-				<link>http://localhost:51043/tags/communication/</link>
+				<link>https://paranormaldistributions.com/tags/communication/</link>
 				<pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/communication/</guid>
+				<guid>https://paranormaldistributions.com/tags/communication/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Lifetime Value</title>
-				<link>http://localhost:51043/tags/lifetime-value/</link>
+				<link>https://paranormaldistributions.com/tags/lifetime-value/</link>
 				<pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/lifetime-value/</guid>
+				<guid>https://paranormaldistributions.com/tags/lifetime-value/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Machine Learning</title>
-				<link>http://localhost:51043/tags/machine-learning/</link>
+				<link>https://paranormaldistributions.com/tags/machine-learning/</link>
 				<pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/machine-learning/</guid>
+				<guid>https://paranormaldistributions.com/tags/machine-learning/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Rfm</title>
-				<link>http://localhost:51043/tags/rfm/</link>
+				<link>https://paranormaldistributions.com/tags/rfm/</link>
 				<pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/rfm/</guid>
+				<guid>https://paranormaldistributions.com/tags/rfm/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Stakeholders</title>
-				<link>http://localhost:51043/tags/stakeholders/</link>
+				<link>https://paranormaldistributions.com/tags/stakeholders/</link>
 				<pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/stakeholders/</guid>
+				<guid>https://paranormaldistributions.com/tags/stakeholders/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Classification</title>
-				<link>http://localhost:51043/tags/classification/</link>
+				<link>https://paranormaldistributions.com/tags/classification/</link>
 				<pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/classification/</guid>
+				<guid>https://paranormaldistributions.com/tags/classification/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Retention</title>
-				<link>http://localhost:51043/tags/retention/</link>
+				<link>https://paranormaldistributions.com/tags/retention/</link>
 				<pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/retention/</guid>
+				<guid>https://paranormaldistributions.com/tags/retention/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Roc-Auc</title>
-				<link>http://localhost:51043/tags/roc-auc/</link>
+				<link>https://paranormaldistributions.com/tags/roc-auc/</link>
 				<pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/roc-auc/</guid>
+				<guid>https://paranormaldistributions.com/tags/roc-auc/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Segmentation</title>
-				<link>http://localhost:51043/tags/segmentation/</link>
+				<link>https://paranormaldistributions.com/tags/segmentation/</link>
 				<pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/segmentation/</guid>
+				<guid>https://paranormaldistributions.com/tags/segmentation/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Users</title>
-				<link>http://localhost:51043/tags/users/</link>
+				<link>https://paranormaldistributions.com/tags/users/</link>
 				<pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/users/</guid>
+				<guid>https://paranormaldistributions.com/tags/users/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Analytics</title>
-				<link>http://localhost:51043/tags/analytics/</link>
+				<link>https://paranormaldistributions.com/tags/analytics/</link>
 				<pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/analytics/</guid>
+				<guid>https://paranormaldistributions.com/tags/analytics/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Attribution</title>
-				<link>http://localhost:51043/tags/attribution/</link>
+				<link>https://paranormaldistributions.com/tags/attribution/</link>
 				<pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/attribution/</guid>
+				<guid>https://paranormaldistributions.com/tags/attribution/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Traffic</title>
-				<link>http://localhost:51043/tags/traffic/</link>
+				<link>https://paranormaldistributions.com/tags/traffic/</link>
 				<pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/traffic/</guid>
+				<guid>https://paranormaldistributions.com/tags/traffic/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Data</title>
-				<link>http://localhost:51043/tags/data/</link>
+				<link>https://paranormaldistributions.com/tags/data/</link>
 				<pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/data/</guid>
+				<guid>https://paranormaldistributions.com/tags/data/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Writing</title>
-				<link>http://localhost:51043/tags/writing/</link>
+				<link>https://paranormaldistributions.com/tags/writing/</link>
 				<pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:51043/tags/writing/</guid>
+				<guid>https://paranormaldistributions.com/tags/writing/</guid>
 				<description></description>
 			</item>
 	</channel>
