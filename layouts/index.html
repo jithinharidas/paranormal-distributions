@@ -5,32 +5,43 @@
     <div class="hero__label fade-up">Latest writing</div>
     <h1 class="hero__title fade-up fade-up-1">Paranormal<br><span>Distributions</span></h1>
     <p class="hero__desc fade-up fade-up-2">{{ .Site.Params.description }}</p>
-    <div class="hero__meta fade-up fade-up-3">{{ .Site.Params.author }} &nbsp;·&nbsp; Business Analyst, <span style="color:#ec4899;">Snabbit</span></div>
+    <div class="hero__meta fade-up fade-up-3">{{ .Site.Params.author }} &nbsp;·&nbsp; Business Analyst, <span class="meta-accent">Snabbit</span></div>
   </section>
 
   <section class="posts">
-    <div class="section-label fade-up">All posts</div>
 
-    {{ range .Site.RegularPages.ByDate.Reverse }}
-    <article class="post-item fade-up">
-      <div class="post-item__date">
-        {{ .Date.Format "Jan 02" }}<br>{{ .Date.Format "2006" }}
+    {{ $all    := .Site.RegularPages.ByDate.Reverse }}
+    {{ $pinned := where $all "Params.pinned" true }}
+    {{ $rest   := where $all "Params.pinned" "!=" true }}
+
+    {{ if $pinned }}
+    <div class="section-label fade-up">Pinned</div>
+    {{ range $pinned }}
+    <a href="{{ .Permalink }}" class="post-row post-row--pinned fade-up">
+      <div class="post-row__meta">
+        {{ with .Params.categories }}{{ range . }}<span class="cat-tag">{{ . }}</span>{{ end }}{{ end }}
+        <span class="post-row__date">{{ .Date.Format "Jan 02, 2006" }}</span>
       </div>
-      <div class="post-item__body">
-        <div class="post-item__meta-row">
-          {{ with .Params.categories }}
-          <div class="post-item__cats">
-            {{ range . }}<span class="cat-tag">{{ . }}</span>{{ end }}
-          </div>
-          {{ end }}
-        </div>
-        <h2 class="post-item__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        {{ with .Description }}<p class="post-item__desc">{{ . }}</p>{{ end }}
-      </div>
-    </article>
-    {{ else }}
-    <p style="color: var(--text-mute); font-family: var(--mono); font-size: 0.8rem; padding: 2rem 0;">No posts yet. First one coming soon.</p>
+      <h2 class="post-row__title post-row__title--big">{{ .Title }}</h2>
+      {{ with .Description }}<p class="post-row__desc">{{ . }}</p>{{ end }}
+      <span class="post-row__arrow">Read &rarr;</span>
+    </a>
     {{ end }}
+    {{ end }}
+
+    <div class="section-label fade-up">All posts</div>
+    <div class="posts-list">
+      {{ range $rest }}
+      <a href="{{ .Permalink }}" class="post-row fade-up">
+        <div class="post-row__meta">
+          {{ with .Params.categories }}{{ range . }}<span class="cat-tag">{{ . }}</span>{{ end }}{{ end }}
+          <span class="post-row__date">{{ .Date.Format "Jan 02, 2006" }}</span>
+        </div>
+        <h2 class="post-row__title">{{ .Title }}</h2>
+        {{ with .Description }}<p class="post-row__desc">{{ . }}</p>{{ end }}
+      </a>
+      {{ end }}
+    </div>
 
   </section>
 
