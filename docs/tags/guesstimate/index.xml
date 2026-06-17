@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Guesstimate on Paranormal Distributions</title>
+		<link>http://localhost:51043/tags/guesstimate/</link>
+		<description>Recent content in Guesstimate on Paranormal Distributions</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 17 Jun 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:51043/tags/guesstimate/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>The Analyst Interview is Not About the Right Answer</title>
+				<link>http://localhost:51043/posts/ba-interview-not-about-right-answer/</link>
+				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:51043/posts/ba-interview-not-about-right-answer/</guid>
+				<description>&lt;p&gt;Most people prepare for a analyst interview by practising answers.&lt;/p&gt;&#xA;&lt;p&gt;That is the wrong thing to practise.&lt;/p&gt;&#xA;&lt;p&gt;Interviewers are not checking your answer. They are watching how you got there. A wrong answer reached through good thinking is more impressive than a right answer that appeared from nowhere. A structured approach to a problem you cannot fully solve is more valuable than a perfect solution to the wrong question.&lt;/p&gt;&#xA;&lt;p&gt;This post is about the three rounds most analyst interviews have, what interviewers are actually evaluating in each, and how to prepare for that instead of the answer.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

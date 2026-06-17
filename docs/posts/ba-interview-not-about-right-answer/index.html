@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51043&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Analyst Interview is Not About the Right Answer — Paranormal Distributions</title>
+  <link rel="canonical" href="http://localhost:51043/posts/ba-interview-not-about-right-answer/">
+  <meta name="description" content="The correct SQL query matters less than how you approached it. The right guesstimate number matters less than the structure you used to get there.">
+  <meta name="author" content="Jithin K Haridas">
+  <meta property="og:title" content="The Analyst Interview is Not About the Right Answer">
+  <meta property="og:description" content="The correct SQL query matters less than how you approached it. The right guesstimate number matters less than the structure you used to get there.">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/css/main.css?v=1781675298">
+  
+  <meta property="article:published_time" content="2026-06-17">
+  
+</head>
+<body>
+
+  <script>
+    (function() {
+      const saved = localStorage.getItem('pd-theme');
+      if (saved === 'light') document.body.classList.add('light');
+    })();
+  </script>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__brand">
+        <span class="brand-full">paranormal-distributions</span>
+        <span class="brand-short">pd</span>
+      </a>
+      <svg class="nav-ghost" viewBox="0 0 40 50" xmlns="http://www.w3.org/2000/svg" width="18" height="22" aria-label="ghost">
+        <path class="ghost-body" d="M5 25 Q5 8 20 8 Q35 8 35 25 L35 44 Q35 44 30 40 Q27 37 25 40 Q22 43 20 40 Q18 37 15 40 Q13 43 10 40 Q5 44 5 44 Z" fill="#ff6b35" fill-opacity="0.18" stroke="#ff6b35" stroke-width="1.2" stroke-opacity="0.6"/>
+        <ellipse class="ghost-eye-l" cx="14.5" cy="24" rx="4" ry="5" fill="#ff6b35" fill-opacity="0.9"/>
+        <ellipse cx="15.5" cy="23" rx="1.5" ry="2" fill="#0d0f14"/>
+        <ellipse class="ghost-eye-r" cx="25.5" cy="24" rx="4" ry="5" fill="#ff6b35" fill-opacity="0.9"/>
+        <ellipse cx="26.5" cy="23" rx="1.5" ry="2" fill="#0d0f14"/>
+      </svg>
+      <ul class="nav__links">
+        <li><a href="/">Posts</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+        <svg id="iconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg id="iconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  
+<div class="container">
+  <article class="post">
+
+    <header class="post__header fade-up">
+      
+      <div class="post__cats">
+        <span class="cat-tag">Career</span>
+      </div>
+      
+      <h1 class="post__title">The Analyst Interview is Not About the Right Answer</h1>
+      <div class="post__meta">
+        <span>June 17, 2026</span>
+        <span>10 min read</span>
+      </div>
+      <div class="post__divider"></div>
+    </header>
+
+    <div class="post__content fade-up fade-up-2">
+      <p>Most people prepare for a analyst interview by practising answers.</p>
+<p>That is the wrong thing to practise.</p>
+<p>Interviewers are not checking your answer. They are watching how you got there. A wrong answer reached through good thinking is more impressive than a right answer that appeared from nowhere. A structured approach to a problem you cannot fully solve is more valuable than a perfect solution to the wrong question.</p>
+<p>This post is about the three rounds most analyst interviews have, what interviewers are actually evaluating in each, and how to prepare for that instead of the answer.</p>
+<hr>
+<h2 id="the-sql-round">The SQL Round</h2>
+<p>The question is never really about SQL.</p>
+<p>It looks like a SQL question. It has tables and columns and asks you to write a query. But what the interviewer is watching is whether you can translate a business question into a data question before you write a single line of code.</p>
+<p>&ldquo;Find the top 10 restaurants by order value last week, excluding cancelled orders.&rdquo;</p>
+<p>Before you type anything, you should be asking: what counts as an order? Is last week Monday to Sunday or the last 7 days? What order statuses count as cancelled? These questions are not stalling. They are the job.</p>
+<p>The SQL itself is secondary. Most interviewers do not care if you get the exact syntax right. They care if your logic is sound.</p>
+<p><strong>What to actually study:</strong></p>
+<p><strong>JOINs first.</strong> INNER, LEFT, RIGHT. Know when to use each and why. Most interview questions involve at least two tables. Understanding which join preserves which rows is more important than anything else.</p>
+<p><strong>Aggregations and GROUP BY.</strong> SUM, COUNT, AVG, MAX, MIN. Know that WHERE filters before aggregation and HAVING filters after. This trips people up more than anything.</p>
+<p><strong>Window functions.</strong> This is where most candidates fall short and where you can stand out.</p>
+<p>A window function does a calculation across a set of rows related to the current row, without collapsing the result into a single row the way GROUP BY does.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">SELECT</span>
+</span></span><span style="display:flex;"><span>  order_id,
+</span></span><span style="display:flex;"><span>  user_id,
+</span></span><span style="display:flex;"><span>  order_value,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">SUM</span>(order_value) OVER (PARTITION <span style="color:#ff79c6">BY</span> user_id) <span style="color:#ff79c6">AS</span> total_user_spend,
+</span></span><span style="display:flex;"><span>  RANK() OVER (PARTITION <span style="color:#ff79c6">BY</span> city <span style="color:#ff79c6">ORDER</span> <span style="color:#ff79c6">BY</span> order_value <span style="color:#ff79c6">DESC</span>) <span style="color:#ff79c6">AS</span> rank_in_city,
+</span></span><span style="display:flex;"><span>  LAG(order_value) OVER (PARTITION <span style="color:#ff79c6">BY</span> user_id <span style="color:#ff79c6">ORDER</span> <span style="color:#ff79c6">BY</span> order_date) <span style="color:#ff79c6">AS</span> previous_order_value
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> orders
+</span></span></code></pre></div><p>The three most useful window functions to know:</p>
+<p><strong>ROW_NUMBER / RANK / DENSE_RANK:</strong> for ranking within a group. Use RANK when you want ties to share a rank. Use ROW_NUMBER when you need unique sequential numbers regardless of ties.</p>
+<p><strong>LAG / LEAD:</strong> for comparing a row to the previous or next row. Extremely useful for retention analysis, day-over-day comparisons, finding gaps between events.</p>
+<p><strong>SUM / AVG / COUNT OVER:</strong> for running totals or group-level metrics alongside row-level detail. Much cleaner than a subquery for many use cases.</p>
+<p>Practice these until they feel natural. A candidate who reaches for a window function when it is the right tool immediately signals experience.</p>
+<p><strong>CTEs</strong> are also worth knowing. They make complex queries readable and are often the cleaner alternative to nested subqueries.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">WITH</span> active_users <span style="color:#ff79c6">AS</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">SELECT</span> user_id
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">FROM</span> orders
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">WHERE</span> order_date <span style="color:#ff79c6">&gt;=</span> <span style="color:#ff79c6">current_date</span> <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">30</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">GROUP</span> <span style="color:#ff79c6">BY</span> user_id
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">HAVING</span> <span style="color:#ff79c6">COUNT</span>(<span style="color:#ff79c6">*</span>) <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">2</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">COUNT</span>(<span style="color:#ff79c6">*</span>) <span style="color:#ff79c6">FROM</span> active_users
+</span></span></code></pre></div><hr>
+<h2 id="the-case-study-round">The Case Study Round</h2>
+<p>There is no right answer. The interviewer knows this going in.</p>
+<p>What they are evaluating: do you clarify before you dive in, do you structure your thinking, do you consider both the user and the business, do you handle a pushback without falling apart.</p>
+<p>The most common type of case study in analyst interviews at product companies is the metric movement question. Something dropped or something spiked and you have to figure out why.</p>
+<p><strong>Example: DAU dropped 20% week over week. What do you do?</strong></p>
+<p>Most candidates immediately start listing possible reasons. That is the wrong move. You do not have enough information yet.</p>
+<p>Start with clarifying questions.</p>
+<p>Is this a sudden drop or a gradual decline? Is it global or specific to a platform, region, or user segment? Did anything change recently: a release, a campaign, a competitor move. Is the data itself reliable, or could this be a tracking issue?</p>
+<p>Then structure your investigation.</p>
+<p><strong>Step 1: Validate the data.</strong> Is this real or is a pipeline broken? Check if other metrics moved in a correlated way. If DAU dropped but sessions did not, something is wrong with the measurement.</p>
+<p><strong>Step 2: Segment the drop.</strong> Where is it coming from? New users or returning users? iOS or Android? A specific city? A specific feature? A 20% overall drop that is entirely explained by one city on one platform is a very different problem from a broad decline across all segments.</p>
+<p><strong>Step 3: Check for external causes.</strong> Public holiday, competitor promotion, news event, payment gateway outage. These happen more often than people think.</p>
+<p><strong>Step 4: Check internal causes.</strong> Recent app update, push notification change, pricing change, feature removal.</p>
+<p><strong>Step 5: Propose next steps.</strong> Based on what you find, what do you investigate further and how?</p>
+<p>The interviewer will push back somewhere in this process. That is intentional. They want to see if you defend your thinking or fold immediately. You can update your position if the pushback makes sense. You should not abandon your structure just because someone challenged it.</p>
+<hr>
+<h2 id="the-guesstimate-round">The Guesstimate Round</h2>
+<p>The number does not matter.</p>
+<p>Read that again, because it is the thing most people do not believe until they have done a few interviews.</p>
+<p>Nobody knows how many pizzas are sold in Bengaluru in a day. The interviewer does not know. You do not know. Nobody in the room knows. What the interviewer wants to see is whether you can build a reasonable structure to approach a problem where you do not have the answer.</p>
+<p><strong>Example: How many pizzas are sold in Bengaluru per day?</strong></p>
+<p>Before you start calculating, do two things. Clarify the scope: are we talking delivery only or all consumption including restaurants and quick service counters? And state that you are going to approach this from two sides and then see if the answers are in the same ballpark.</p>
+<p>There are two ways to approach a guesstimate. Come at it from the demand side or the supply side. Doing both and checking whether they roughly agree is one of the best signals you can send in an interview.</p>
+<p><strong>Demand side approach:</strong></p>
+<p>Start with the population and work down to the behaviour.</p>
+<p>Bengaluru population: roughly 13 million people.
+Average household size: 3 to 4 people. So around 3.5 million households.</p>
+<p>Now segment those households. Not everyone eats pizza with the same frequency.</p>
+<p>Higher income households, maybe 20% of the total, probably order pizza once or twice a week. That is around 700,000 households ordering maybe 1.5 times a week on average, so about 150,000 pizza orders from this segment per week, or 21,000 per day.</p>
+<p>Middle income households, maybe 50% of the total, order pizza a few times a month. Say twice a month. That is 1.75 million households, 2 orders per month, so 3.5 million orders per month from this segment, or around 117,000 per day.</p>
+<p>Lower income households, the remaining 30%, rarely order pizza. Maybe once every two to three months. 1.05 million households, roughly 0.4 orders per month per household, gives about 420,000 orders per month or 14,000 per day.</p>
+<p>Total online delivery estimate: roughly 150,000 pizzas per day.</p>
+<p>But delivery is only part of the picture. People also eat pizza at restaurants, at office cafeterias, and from quick service counters at malls. Offline consumption might be another 40 to 50 percent on top of delivery.</p>
+<p>Total demand side estimate: 210,000 to 225,000 pizzas per day.</p>
+<p><strong>Supply side approach:</strong></p>
+<p>Now come at it from the other direction and see if it holds up.</p>
+<p>How many pizza outlets are there in Bengaluru? Food delivery platforms list somewhere around 2,000 to 3,000 pizza options across all formats but not all of these are dedicated pizza outlets. Some are cloud kitchens sharing a listing, some are multi-cuisine places that happen to list pizza. Estimate around 800 to 1,000 dedicated pizza outlets of varying sizes.</p>
+<p>Break them down by type:</p>
+<p>Large chain outlets like Domino&rsquo;s and Pizza Hut. Bengaluru has around 150 to 200 of these. A busy outlet might sell 200 to 300 pizzas on a weekday and more on weekends. Average across the week: 200 per day. That gives roughly 35,000 to 40,000 pizzas per day just from large chains.</p>
+<p>Mid-size standalone pizza restaurants. Maybe 300 to 400 across the city. These sell fewer. Average 60 to 80 pizzas per day. That is 20,000 to 30,000 pizzas per day.</p>
+<p>Small places, cloud kitchens, bakeries with pizza on the menu. Perhaps 500 to 600 of these. Much lower volume, maybe 20 to 30 per day each. That is 10,000 to 18,000 pizzas per day.</p>
+<p>Total supply side estimate: 65,000 to 88,000 pizzas per day from dedicated outlets. Add informal supply not captured here, maybe another 30 percent, and you get 85,000 to 115,000 pizzas per day.</p>
+<p><strong>Reconciling the two approaches:</strong></p>
+<p>The demand side gives you 210,000 to 225,000. The supply side gives you 85,000 to 115,000. They are not in the same ballpark, which means one of your assumptions is off.</p>
+<p>This is actually fine. This is what a good guesstimate looks like. You found a discrepancy and now you think through why.</p>
+<p>Possible reasons: the demand side might be overestimating frequency in middle income households. The supply side might be underestimating the number of outlets or missing a large segment. Probably both are a little off.</p>
+<p>You might settle on 150,000 to 175,000 as your final estimate, explain your reasoning for landing there between the two approaches, and flag the assumptions you are least confident about.</p>
+<p>The interviewer is watching all of this. They are not checking your arithmetic. They are checking whether you can navigate uncertainty, whether you segment intelligently, whether you think about online and offline separately, whether you catch your own inconsistencies, and whether you can explain your thinking clearly while doing it.</p>
+<p><strong>One more thing worth saying out loud:</strong></p>
+<p>State every assumption as you make it. Do not use a number silently. Say &ldquo;I am assuming Bengaluru has around 13 million people&rdquo; and &ldquo;I am assuming a middle income household orders pizza about twice a month.&rdquo; This serves two purposes. It shows your reasoning. And it gives the interviewer a chance to correct you if you are wildly off, which is actually helpful.</p>
+<p><strong>A note on practice:</strong></p>
+<p>This walkthrough is more detailed than what you would say in an actual interview, which typically runs 10 to 15 minutes for a guesstimate. The point is to show you all the components: segmentation, two-sided approach, reconciliation, assumption flagging.</p>
+<p>In practice, you would move faster and skip some of the granularity. But you need to understand each piece before you can condense it. Practice guesstimates out loud, with a timer, with someone who will push back on your assumptions. The structure becomes natural only through repetition.</p>
+<p>Good questions to practice on:</p>
+<ul>
+<li>How many cups of chai are consumed in India per day?</li>
+<li>How many Uber rides happen in Mumbai on a weekday?</li>
+<li>How many wedding photographers are there in India?</li>
+<li>How many gym memberships are active in Bengaluru?</li>
+</ul>
+<p>Each of these has a demand side and a supply side. Each has online and offline components. Each requires you to segment the population meaningfully before you start multiplying numbers.</p>
+<p>The goal is not to get the right answer. The goal is to build the habit of structured thinking under pressure. Do that consistently and the number will take care of itself.</p>
+<hr>
+<h2 id="the-thing-that-connects-all-three">The thing that connects all three</h2>
+<p>SQL, case study, guesstimate. Three different formats, same underlying evaluation.</p>
+<p>Can you structure a problem before you solve it? Can you communicate your thinking as you go? Can you handle uncertainty without panicking? Can you update your position when new information arrives without losing the thread of your argument?</p>
+<p>These are not interview skills. These are the actual skills of the job.</p>
+<p>The interview is not testing whether you know the right answer. It is testing whether you are the kind of person who finds the right answer. Those are very different things, and the preparation for each is very different.</p>
+<p>Practise thinking out loud. Practise asking clarifying questions before you start. Practise being wrong partway through and correcting yourself without losing confidence.</p>
+<p>The answer matters less than you think. The approach is the whole thing.</p>
+
+    </div>
+
+    <div class="share-bar fade-up">
+      <span class="share-bar__label">share</span>
+      <button class="share-btn" id="shareNative" aria-label="Share" style="display:none;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      </button>
+      <a class="share-btn" href="https://twitter.com/intent/tweet?text=The&#43;Analyst&#43;Interview&#43;is&#43;Not&#43;About&#43;the&#43;Right&#43;Answer&url=http%3A%2F%2Flocalhost%3A51043%2Fposts%2Fba-interview-not-about-right-answer%2F" target="_blank" rel="noopener" aria-label="Share on X">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.631L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+      </a>
+      <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Flocalhost%3A51043%2Fposts%2Fba-interview-not-about-right-answer%2F" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <button class="share-btn" id="copyLink" aria-label="Copy link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      </button>
+    </div>
+
+    <script>
+      var shareNative = document.getElementById('shareNative');
+      var copyLink    = document.getElementById('copyLink');
+      if (navigator.share) {
+        shareNative.style.display = 'flex';
+        shareNative.addEventListener('click', function() {
+          navigator.share({ title: document.title, url: location.href });
+        });
+      }
+      copyLink.addEventListener('click', function() {
+        navigator.clipboard.writeText(location.href).then(function() {
+          copyLink.classList.add('copied');
+          setTimeout(function() { copyLink.classList.remove('copied'); }, 2000);
+        });
+      });
+    </script>
+
+  </article>
+</div>
+
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">~/<span>paranormal-distributions</span></div>
+      <div class="footer__right">
+        <a href="https://www.instagram.com/paranormaldistributions/" target="_blank" rel="noopener" aria-label="Instagram" class="footer__social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="https://www.threads.net/@paranormaldistributions" target="_blank" rel="noopener" aria-label="Threads" class="footer__social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 7.5c-1.333-3-3.667-4.5-7-4.5C7.5 3 4 6.5 4 12s3.5 9 8 9c3.5 0 6.5-2 7.5-5.5"/>
+            <path d="M14.5 9c-.667-.333-1.5-.5-2.5-.5-2.5 0-4 1.5-4 3.5s1.5 3 3.5 3c1.5 0 2.833-.5 3.5-2 .167-.5.25-1 .25-1.5 0-2-1.25-3-3.25-3"/>
+          </svg>
+        </a>
+        <div class="footer__copy">© 2026 Jithin K Haridas</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    
+    const ghost     = document.querySelector('.nav-ghost');
+    const nav       = document.querySelector('.nav__inner');
+    const ghostBody = document.querySelector('.ghost-body');
+    const eyeL      = document.querySelector('.ghost-eye-l');
+    const eyeR      = document.querySelector('.ghost-eye-r');
+
+    let x = 130, dir = 1, tick = 0;
+    let flickerTimer = Math.floor(Math.random() * 300);
+    let isWhite = false, whiteTimer = 0;
+
+    function setGhostColor(white) {
+      ghostBody.setAttribute('fill',   white ? 'rgba(255,255,255,0.15)' : 'rgba(255,107,53,0.18)');
+      ghostBody.setAttribute('stroke', white ? 'rgba(255,255,255,0.5)'  : 'rgba(255,107,53,0.6)');
+      eyeL.setAttribute('fill', white ? 'rgba(255,255,255,0.95)' : 'rgba(255,107,53,0.9)');
+      eyeR.setAttribute('fill', white ? 'rgba(255,255,255,0.95)' : 'rgba(255,107,53,0.9)');
+    }
+
+    function animate() {
+      tick++; flickerTimer++;
+      if (isWhite) whiteTimer++;
+
+      x += 0.35 * dir;
+      const navW = nav.offsetWidth;
+      if (x > navW - 160) { dir = -1; ghost.style.transform = 'scaleX(-1)'; }
+      if (x < 130)        { dir =  1; ghost.style.transform = 'scaleX(1)'; }
+
+      const y = Math.sin(tick * 0.04) * 3;
+      let opacity = 0.72;
+      let filter  = 'drop-shadow(0 0 3px rgba(255,107,53,0.25))';
+
+      if (!isWhite && flickerTimer > 280 && Math.random() < 0.008) {
+        isWhite = true; whiteTimer = 0; setGhostColor(true);
+      }
+      if (isWhite) {
+        filter  = 'drop-shadow(0 0 10px rgba(255,107,53,0.9)) drop-shadow(0 0 4px rgba(255,255,255,0.6))';
+        opacity = 0.95;
+        if (whiteTimer > 90) { isWhite = false; setGhostColor(false); }
+      }
+      if (!isWhite && flickerTimer > 200 && flickerTimer < 206) {
+        opacity = flickerTimer % 2 === 0 ? 0.1 : 0.9;
+        filter  = 'drop-shadow(0 0 8px rgba(255,107,53,0.8))';
+      }
+      if (flickerTimer > 400) flickerTimer = 0;
+
+      ghost.style.position  = 'absolute';
+      ghost.style.left      = x + 'px';
+      ghost.style.top       = '50%';
+      ghost.style.marginTop = (y - 11) + 'px';
+      ghost.style.opacity   = opacity;
+      ghost.style.filter    = filter;
+      ghost.style.pointerEvents = 'none';
+      requestAnimationFrame(animate);
+    }
+
+    nav.style.position = 'relative';
+    animate();
+
+    
+    const toggleBtn = document.getElementById('themeToggle');
+    const iconMoon  = document.getElementById('iconMoon');
+    const iconSun   = document.getElementById('iconSun');
+
+    function applyTheme(theme) {
+      if (theme === 'light') {
+        document.body.classList.add('light');
+        iconMoon.style.display = 'none';
+        iconSun.style.display  = 'block';
+      } else {
+        document.body.classList.remove('light');
+        iconMoon.style.display = 'block';
+        iconSun.style.display  = 'none';
+      }
+    }
+
+    applyTheme(localStorage.getItem('pd-theme') || 'dark');
+    toggleBtn.addEventListener('click', () => {
+      const next = document.body.classList.contains('light') ? 'dark' : 'light';
+      localStorage.setItem('pd-theme', next);
+      applyTheme(next);
+    });
+  </script>
+
+</body>
+</html>

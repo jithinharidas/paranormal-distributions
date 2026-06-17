@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on Paranormal Distributions</title>
-    <link>https://paranormaldistributions.com/categories/</link>
-    <description>Recent content in Categories on Paranormal Distributions</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://paranormaldistributions.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Statistics</title>
-      <link>https://paranormaldistributions.com/categories/statistics/</link>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://paranormaldistributions.com/categories/statistics/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Analytics</title>
-      <link>https://paranormaldistributions.com/categories/analytics/</link>
-      <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://paranormaldistributions.com/categories/analytics/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Career</title>
-      <link>https://paranormaldistributions.com/categories/career/</link>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://paranormaldistributions.com/categories/career/</guid>
-      <description></description>
-    </item>
-  </channel>
+	<channel>
+		<title>Categories on Paranormal Distributions</title>
+		<link>http://localhost:51043/categories/</link>
+		<description>Recent content in Categories on Paranormal Distributions</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 17 Jun 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:51043/categories/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Career</title>
+				<link>http://localhost:51043/categories/career/</link>
+				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:51043/categories/career/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Analytics</title>
+				<link>http://localhost:51043/categories/analytics/</link>
+				<pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:51043/categories/analytics/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Statistics</title>
+				<link>http://localhost:51043/categories/statistics/</link>
+				<pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:51043/categories/statistics/</guid>
+				<description></description>
+			</item>
+	</channel>
 </rss>

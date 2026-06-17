@@ -1,0 +1,51 @@
+<div class="diagram-scroll">
+<svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;font-family:'JetBrains Mono',monospace;">
+  <rect width="680" height="300" rx="6" fill="#12151c"/>
+  <text x="340" y="24" text-anchor="middle" fill="#3d4557" font-size="10" letter-spacing="2">DROP-OFF AT EACH STAGE · THIS IS WHERE TO LOOK</text>
+
+  <!-- Y axis -->
+  <line x1="80" y1="45" x2="80" y2="240" stroke="#262d3f" stroke-width="1"/>
+  <line x1="80" y1="240" x2="620" y2="240" stroke="#262d3f" stroke-width="1"/>
+
+  <!-- Grid -->
+  <line x1="80" y1="140" x2="620" y2="140" stroke="#262d3f" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="80" y1="90" x2="620" y2="90" stroke="#262d3f" stroke-width="0.5" stroke-dasharray="3,3"/>
+
+  <!-- Y labels -->
+  <text x="70" y="244" text-anchor="end" fill="#3d4557" font-size="9">0%</text>
+  <text x="70" y="144" text-anchor="end" fill="#3d4557" font-size="9">50%</text>
+  <text x="70" y="94" text-anchor="end" fill="#3d4557" font-size="9">75%</text>
+  <text x="70" y="49" text-anchor="end" fill="#3d4557" font-size="9">100%</text>
+
+  <!-- Bars: drop % at each transition -->
+  <!-- Visit -> Signup: 58% drop -->
+  <rect x="100" y="124" width="80" height="116" rx="3" fill="#ff6b35" fill-opacity="0.8"/>
+  <text x="140" y="118" text-anchor="middle" fill="#ff6b35" font-size="12" font-weight="bold">58%</text>
+  <text x="140" y="260" text-anchor="middle" fill="#6b778f" font-size="10">Visit</text>
+  <text x="140" y="273" text-anchor="middle" fill="#3d4557" font-size="9">to Signup</text>
+
+  <!-- Signup -> Cart: 50% drop -->
+  <rect x="220" y="140" width="80" height="100" rx="3" fill="#ff6b35" fill-opacity="0.6"/>
+  <text x="260" y="134" text-anchor="middle" fill="#ff6b35" font-size="12" font-weight="bold">50%</text>
+  <text x="260" y="260" text-anchor="middle" fill="#6b778f" font-size="10">Signup</text>
+  <text x="260" y="273" text-anchor="middle" fill="#3d4557" font-size="9">to Cart</text>
+
+  <!-- Cart -> Checkout: 50% drop -->
+  <rect x="340" y="140" width="80" height="100" rx="3" fill="#ff6b35" fill-opacity="0.6"/>
+  <text x="380" y="134" text-anchor="middle" fill="#ff6b35" font-size="12" font-weight="bold">50%</text>
+  <text x="380" y="260" text-anchor="middle" fill="#6b778f" font-size="10">Cart</text>
+  <text x="380" y="273" text-anchor="middle" fill="#3d4557" font-size="9">to Checkout</text>
+
+  <!-- Checkout -> Convert: 70% drop -->
+  <rect x="460" y="100" width="80" height="140" rx="3" fill="#ff6b35" fill-opacity="0.35"/>
+  <text x="500" y="94" text-anchor="middle" fill="#ff6b35" font-size="12" font-weight="bold">70%</text>
+  <text x="500" y="260" text-anchor="middle" fill="#6b778f" font-size="10">Checkout</text>
+  <text x="500" y="273" text-anchor="middle" fill="#3d4557" font-size="9">to Convert</text>
+
+  <!-- Annotation pointing to Visit->Signup -->
+  <line x1="140" y1="108" x2="140" y2="60" stroke="#ff6b35" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="148" y="56" fill="#ff6b35" font-size="9">biggest leak</text>
+
+  <text x="340" y="292" text-anchor="middle" fill="#3d4557" font-size="9">fix the biggest drop first · not the last step</text>
+</svg>
+</div>

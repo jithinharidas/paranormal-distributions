@@ -2,117 +2,150 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://paranormaldistributions.com/tags/bias/</loc>
+    <loc>http://localhost:51043/tags/analyst/</loc>
+    <lastmod>2026-06-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/categories/career/</loc>
+    <lastmod>2026-06-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/tags/case-study/</loc>
+    <lastmod>2026-06-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/categories/</loc>
+    <lastmod>2026-06-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/tags/guesstimate/</loc>
+    <lastmod>2026-06-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/tags/interview/</loc>
+    <lastmod>2026-06-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/</loc>
+    <lastmod>2026-06-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/posts/</loc>
+    <lastmod>2026-06-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/tags/sql/</loc>
+    <lastmod>2026-06-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/tags/</loc>
+    <lastmod>2026-06-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/posts/ba-interview-not-about-right-answer/</loc>
+    <lastmod>2026-06-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/categories/analytics/</loc>
+    <lastmod>2026-05-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/tags/conversion/</loc>
+    <lastmod>2026-05-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/tags/funnels/</loc>
+    <lastmod>2026-05-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/tags/product-analytics/</loc>
+    <lastmod>2026-05-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/posts/the-leaky-bucket-problem/</loc>
+    <lastmod>2026-05-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/tags/user-behaviour/</loc>
+    <lastmod>2026-05-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:51043/tags/bias/</loc>
     <lastmod>2026-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/categories/</loc>
+    <loc>http://localhost:51043/tags/data-thinking/</loc>
     <lastmod>2026-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/data-thinking/</loc>
+    <loc>http://localhost:51043/tags/human-behaviour/</loc>
     <lastmod>2026-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/human-behaviour/</loc>
+    <loc>http://localhost:51043/tags/patterns/</loc>
     <lastmod>2026-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/</loc>
+    <loc>http://localhost:51043/categories/statistics/</loc>
     <lastmod>2026-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/patterns/</loc>
+    <loc>http://localhost:51043/posts/we-are-pattern-machines/</loc>
     <lastmod>2026-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/posts/</loc>
-    <lastmod>2026-05-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/categories/statistics/</loc>
-    <lastmod>2026-05-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/tags/</loc>
-    <lastmod>2026-05-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/posts/we-are-pattern-machines/</loc>
-    <lastmod>2026-05-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/categories/analytics/</loc>
+    <loc>http://localhost:51043/tags/anomaly-detection/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/anomaly-detection/</loc>
+    <loc>http://localhost:51043/tags/dashboards/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/dashboards/</loc>
+    <loc>http://localhost:51043/tags/data-quality/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/data-quality/</loc>
+    <loc>http://localhost:51043/tags/metrics/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/metrics/</loc>
+    <loc>http://localhost:51043/posts/the-metric-that-looked-fine-until-it-wasnt/</loc>
     <lastmod>2026-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/posts/the-metric-that-looked-fine-until-it-wasnt/</loc>
-    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/tags/communication/</loc>
+    <loc>http://localhost:51043/tags/communication/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/lifetime-value/</loc>
+    <loc>http://localhost:51043/tags/lifetime-value/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/machine-learning/</loc>
+    <loc>http://localhost:51043/tags/machine-learning/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/rfm/</loc>
+    <loc>http://localhost:51043/tags/rfm/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/stakeholders/</loc>
+    <loc>http://localhost:51043/tags/stakeholders/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/posts/the-model-said-091-my-stakeholder-said-prove-it/</loc>
+    <loc>http://localhost:51043/posts/the-model-said-091-my-stakeholder-said-prove-it/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/classification/</loc>
+    <loc>http://localhost:51043/tags/classification/</loc>
     <lastmod>2026-04-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/retention/</loc>
+    <loc>http://localhost:51043/tags/retention/</loc>
     <lastmod>2026-04-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/roc-auc/</loc>
+    <loc>http://localhost:51043/tags/roc-auc/</loc>
     <lastmod>2026-04-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/posts/teaching-a-machine-who-your-best-customers-are/</loc>
+    <loc>http://localhost:51043/posts/teaching-a-machine-who-your-best-customers-are/</loc>
     <lastmod>2026-04-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/posts/not-all-users-are-your-users/</loc>
+    <loc>http://localhost:51043/posts/not-all-users-are-your-users/</loc>
     <lastmod>2026-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/segmentation/</loc>
+    <loc>http://localhost:51043/tags/segmentation/</loc>
     <lastmod>2026-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/users/</loc>
+    <loc>http://localhost:51043/tags/users/</loc>
     <lastmod>2026-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/analytics/</loc>
+    <loc>http://localhost:51043/tags/analytics/</loc>
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/attribution/</loc>
+    <loc>http://localhost:51043/tags/attribution/</loc>
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/traffic/</loc>
+    <loc>http://localhost:51043/tags/traffic/</loc>
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/posts/who-gets-the-credit-attribution/</loc>
+    <loc>http://localhost:51043/posts/who-gets-the-credit-attribution/</loc>
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/categories/career/</loc>
+    <loc>http://localhost:51043/tags/data/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/data/</loc>
+    <loc>http://localhost:51043/posts/why-i-started-paranormal-distributions/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/posts/why-i-started-paranormal-distributions/</loc>
+    <loc>http://localhost:51043/tags/writing/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paranormaldistributions.com/tags/writing/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paranormaldistributions.com/about/</loc>
+    <loc>http://localhost:51043/about/</loc>
   </url>
 </urlset>

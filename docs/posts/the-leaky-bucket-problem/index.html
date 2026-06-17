@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51043&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Leaky Bucket Problem — Paranormal Distributions</title>
+  <link rel="canonical" href="http://localhost:51043/posts/the-leaky-bucket-problem/">
+  <meta name="description" content="Your conversion rate is 3.2%. That number tells you almost nothing. Here is what to look at instead.">
+  <meta name="author" content="Jithin K Haridas">
+  <meta property="og:title" content="The Leaky Bucket Problem">
+  <meta property="og:description" content="Your conversion rate is 3.2%. That number tells you almost nothing. Here is what to look at instead.">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/css/main.css?v=1781675298">
+  
+  <meta property="article:published_time" content="2026-05-30">
+  
+</head>
+<body>
+
+  <script>
+    (function() {
+      const saved = localStorage.getItem('pd-theme');
+      if (saved === 'light') document.body.classList.add('light');
+    })();
+  </script>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__brand">
+        <span class="brand-full">paranormal-distributions</span>
+        <span class="brand-short">pd</span>
+      </a>
+      <svg class="nav-ghost" viewBox="0 0 40 50" xmlns="http://www.w3.org/2000/svg" width="18" height="22" aria-label="ghost">
+        <path class="ghost-body" d="M5 25 Q5 8 20 8 Q35 8 35 25 L35 44 Q35 44 30 40 Q27 37 25 40 Q22 43 20 40 Q18 37 15 40 Q13 43 10 40 Q5 44 5 44 Z" fill="#ff6b35" fill-opacity="0.18" stroke="#ff6b35" stroke-width="1.2" stroke-opacity="0.6"/>
+        <ellipse class="ghost-eye-l" cx="14.5" cy="24" rx="4" ry="5" fill="#ff6b35" fill-opacity="0.9"/>
+        <ellipse cx="15.5" cy="23" rx="1.5" ry="2" fill="#0d0f14"/>
+        <ellipse class="ghost-eye-r" cx="25.5" cy="24" rx="4" ry="5" fill="#ff6b35" fill-opacity="0.9"/>
+        <ellipse cx="26.5" cy="23" rx="1.5" ry="2" fill="#0d0f14"/>
+      </svg>
+      <ul class="nav__links">
+        <li><a href="/">Posts</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+        <svg id="iconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg id="iconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  
+<div class="container">
+  <article class="post">
+
+    <header class="post__header fade-up">
+      
+      <div class="post__cats">
+        <span class="cat-tag">Analytics</span>
+      </div>
+      
+      <h1 class="post__title">The Leaky Bucket Problem</h1>
+      <div class="post__meta">
+        <span>May 30, 2026</span>
+        <span>5 min read</span>
+      </div>
+      <div class="post__divider"></div>
+    </header>
+
+    <div class="post__content fade-up fade-up-2">
+      <p>You open Swiggy. You are hungry.</p>
+<p>You scroll through restaurants. You click on one. You look at the menu. You add something to cart. You see the delivery fee. You look at the total. You close the app and eat whatever is in the fridge.</p>
+<p>This happens millions of times a day. And somewhere in a dashboard, it shows up as a drop in the funnel.</p>
+<p>That entire sequence — open, browse, click, add, checkout, order — is a funnel. The question that matters is not how many people ordered. It is at which step most of them left.</p>
+<hr>
+<h2 id="what-a-funnel-actually-is">What a funnel actually is</h2>
+<p>A funnel is just a way of counting how many people make it from one step to the next.</p>
+<p>You start with everyone who could potentially do the thing. You end with the people who actually did it. Every step in between is a place where some of them left.</p>
+<p>The shape is always the same — wide at the top, narrow at the bottom. The interesting part is not the shape. It is where the narrowing happens fastest.</p>
+<div class="diagram-scroll">
+<svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;font-family:'JetBrains Mono',monospace;">
+  <rect width="680" height="380" rx="6" fill="#12151c"/>
+  <text x="340" y="24" text-anchor="middle" fill="#3d4557" font-size="10" letter-spacing="2">THE FUNNEL · WIDE AT TOP · NARROW AT BOTTOM</text>
+
+  
+  <polygon points="80,45 600,45 540,105 140,105" fill="#ff6b35" fill-opacity="0.7"/>
+  <text x="340" y="82" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Visited</text>
+  <text x="340" y="98" text-anchor="middle" fill="#fff" font-size="10">10,000</text>
+
+  
+  <polygon points="140,112 540,112 480,172 200,172" fill="#ff6b35" fill-opacity="0.55"/>
+  <text x="340" y="149" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Signed Up</text>
+  <text x="340" y="165" text-anchor="middle" fill="#fff" font-size="10">4,200 · dropped 58%</text>
+
+  
+  <polygon points="200,179 480,179 430,239 250,239" fill="#ff6b35" fill-opacity="0.4"/>
+  <text x="340" y="216" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Added to Cart</text>
+  <text x="340" y="232" text-anchor="middle" fill="#fff" font-size="10">2,100 · dropped 50%</text>
+
+  
+  <polygon points="250,246 430,246 400,306 280,306" fill="#ff6b35" fill-opacity="0.28"/>
+  <text x="340" y="283" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Checkout</text>
+  <text x="340" y="299" text-anchor="middle" fill="#fff" font-size="10">1,050 · dropped 50%</text>
+
+  
+  <polygon points="280,313 400,313 380,360 300,360" fill="#ff6b35" fill-opacity="0.9"/>
+  <text x="340" y="342" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Converted</text>
+  <text x="340" y="356" text-anchor="middle" fill="#fff" font-size="10">320 · 3.2%</text>
+
+  
+  <text x="560" y="82" fill="#3d4557" font-size="10">100%</text>
+  <text x="560" y="149" fill="#ff6b35" font-size="10">42%</text>
+  <text x="560" y="216" fill="#ff6b35" font-size="10">21%</text>
+  <text x="560" y="283" fill="#ff6b35" font-size="10">10.5%</text>
+  <text x="560" y="342" fill="#ff6b35" font-size="10">3.2%</text>
+</svg>
+</div>
+
+<hr>
+<h2 id="why-your-overall-conversion-rate-is-a-lie">Why your overall conversion rate is a lie</h2>
+<p>3.2%. That is your conversion rate. Users who opened the app and then placed an order.</p>
+<p>That number is true. It is also nearly useless on its own.</p>
+<p>Because 3.2% could mean a hundred different things. It could mean most people drop off immediately after opening the app. It could mean they get all the way to the checkout screen and then leave. It could mean they drop off evenly across every stage. Each of these is a completely different problem requiring a completely different fix.</p>
+<p>Optimising for the overall rate without knowing where the drop happens is like a restaurant knowing their table occupancy is low but not knowing if people are leaving before they sit down, after they see the menu, or when the bill arrives.</p>
+<p>The number hides the story. The stages tell it.</p>
+<hr>
+<h2 id="where-people-actually-drop-off">Where people actually drop off</h2>
+<div class="diagram-scroll">
+<svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;font-family:'JetBrains Mono',monospace;">
+  <rect width="680" height="300" rx="6" fill="#12151c"/>
+  <text x="340" y="24" text-anchor="middle" fill="#3d4557" font-size="10" letter-spacing="2">DROP-OFF AT EACH STAGE · THIS IS WHERE TO LOOK</text>
+
+  
+  <line x1="80" y1="45" x2="80" y2="240" stroke="#262d3f" stroke-width="1"/>
+  <line x1="80" y1="240" x2="620" y2="240" stroke="#262d3f" stroke-width="1"/>
+
+  
+  <line x1="80" y1="140" x2="620" y2="140" stroke="#262d3f" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="80" y1="90" x2="620" y2="90" stroke="#262d3f" stroke-width="0.5" stroke-dasharray="3,3"/>
+
+  
+  <text x="70" y="244" text-anchor="end" fill="#3d4557" font-size="9">0%</text>
+  <text x="70" y="144" text-anchor="end" fill="#3d4557" font-size="9">50%</text>
+  <text x="70" y="94" text-anchor="end" fill="#3d4557" font-size="9">75%</text>
+  <text x="70" y="49" text-anchor="end" fill="#3d4557" font-size="9">100%</text>
+
+  
+  
+  <rect x="100" y="124" width="80" height="116" rx="3" fill="#ff6b35" fill-opacity="0.8"/>
+  <text x="140" y="118" text-anchor="middle" fill="#ff6b35" font-size="12" font-weight="bold">58%</text>
+  <text x="140" y="260" text-anchor="middle" fill="#6b778f" font-size="10">Visit</text>
+  <text x="140" y="273" text-anchor="middle" fill="#3d4557" font-size="9">to Signup</text>
+
+  
+  <rect x="220" y="140" width="80" height="100" rx="3" fill="#ff6b35" fill-opacity="0.6"/>
+  <text x="260" y="134" text-anchor="middle" fill="#ff6b35" font-size="12" font-weight="bold">50%</text>
+  <text x="260" y="260" text-anchor="middle" fill="#6b778f" font-size="10">Signup</text>
+  <text x="260" y="273" text-anchor="middle" fill="#3d4557" font-size="9">to Cart</text>
+
+  
+  <rect x="340" y="140" width="80" height="100" rx="3" fill="#ff6b35" fill-opacity="0.6"/>
+  <text x="380" y="134" text-anchor="middle" fill="#ff6b35" font-size="12" font-weight="bold">50%</text>
+  <text x="380" y="260" text-anchor="middle" fill="#6b778f" font-size="10">Cart</text>
+  <text x="380" y="273" text-anchor="middle" fill="#3d4557" font-size="9">to Checkout</text>
+
+  
+  <rect x="460" y="100" width="80" height="140" rx="3" fill="#ff6b35" fill-opacity="0.35"/>
+  <text x="500" y="94" text-anchor="middle" fill="#ff6b35" font-size="12" font-weight="bold">70%</text>
+  <text x="500" y="260" text-anchor="middle" fill="#6b778f" font-size="10">Checkout</text>
+  <text x="500" y="273" text-anchor="middle" fill="#3d4557" font-size="9">to Convert</text>
+
+  
+  <line x1="140" y1="108" x2="140" y2="60" stroke="#ff6b35" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="148" y="56" fill="#ff6b35" font-size="9">biggest leak</text>
+
+  <text x="340" y="292" text-anchor="middle" fill="#3d4557" font-size="9">fix the biggest drop first · not the last step</text>
+</svg>
+</div>
+
+<p>Look at the drop between each stage, not just the start and end.</p>
+<p>A 60% drop from browsing to clicking a restaurant is a different problem from a 60% drop from cart to payment. The first one is a discovery or relevance problem — people are not finding what they want. The second is a friction or trust problem — they want it but something stopped them at the last step.</p>
+<p>Same percentage, completely different cause, completely different fix.</p>
+<p>The stage with the biggest drop is almost never the last one. It is usually somewhere in the middle, where people had enough interest to get there but not enough conviction to continue. That middle stage is where the product is failing to make its case.</p>
+<hr>
+<h2 id="the-drop-you-should-worry-about-vs-the-drop-you-cannot-fix">The drop you should worry about vs the drop you cannot fix</h2>
+<p>Not all drop-off is created equal.</p>
+<p>Some drop-off is structural. A certain percentage of people who open a food delivery app are just browsing with no real intention to order. They will never convert. That is not a problem to solve, that is the nature of the top of the funnel.</p>
+<p>Some drop-off is fixable. If people are leaving because the delivery fee only appears at checkout, or the estimated time jumped from 30 minutes to 55 minutes, or the payment page errored out — those are solvable problems. You can measure them, fix them, and watch the drop rate change.</p>
+<p>The distinction matters because a lot of analytics energy gets spent trying to reduce drop-off that cannot be reduced, while fixable problems sit untouched because nobody looked at the right stage.</p>
+<hr>
+<h2 id="what-the-funnel-does-not-tell-you">What the funnel does not tell you</h2>
+<p>The funnel tells you where people left. It does not tell you why.</p>
+<p>A 70% drop at the cart stage could mean the delivery fee was too high. It could mean the estimated time was too long. It could mean the user got distracted by a message. It could mean they found a better option somewhere else.</p>
+<p>The funnel gives you the question. The answer requires something else — session recordings, user research, a survey, or just talking to someone who actually left.</p>
+<p>This is the part that gets skipped. The data tells you what happened. The why is still on you.</p>
+<hr>
+<h2 id="the-bit-worth-remembering">The bit worth remembering</h2>
+<p>Your conversion rate is a summary. It summarises a process that has multiple steps, each of which can fail for different reasons.</p>
+<p>The analysts who improve conversion rates are not the ones who look at the summary number and try to move it. They are the ones who look at each stage, find the one that is leaking most, understand why it is leaking, and fix that specific thing.</p>
+<p>The bucket is always leaking somewhere. The question is which hole to plug first.</p>
+<p>Most people look at how much water is left. The useful question is where it is going.</p>
+
+    </div>
+
+    <div class="share-bar fade-up">
+      <span class="share-bar__label">share</span>
+      <button class="share-btn" id="shareNative" aria-label="Share" style="display:none;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      </button>
+      <a class="share-btn" href="https://twitter.com/intent/tweet?text=The&#43;Leaky&#43;Bucket&#43;Problem&url=http%3A%2F%2Flocalhost%3A51043%2Fposts%2Fthe-leaky-bucket-problem%2F" target="_blank" rel="noopener" aria-label="Share on X">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.631L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+      </a>
+      <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Flocalhost%3A51043%2Fposts%2Fthe-leaky-bucket-problem%2F" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <button class="share-btn" id="copyLink" aria-label="Copy link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      </button>
+    </div>
+
+    <script>
+      var shareNative = document.getElementById('shareNative');
+      var copyLink    = document.getElementById('copyLink');
+      if (navigator.share) {
+        shareNative.style.display = 'flex';
+        shareNative.addEventListener('click', function() {
+          navigator.share({ title: document.title, url: location.href });
+        });
+      }
+      copyLink.addEventListener('click', function() {
+        navigator.clipboard.writeText(location.href).then(function() {
+          copyLink.classList.add('copied');
+          setTimeout(function() { copyLink.classList.remove('copied'); }, 2000);
+        });
+      });
+    </script>
+
+  </article>
+</div>
+
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">~/<span>paranormal-distributions</span></div>
+      <div class="footer__right">
+        <a href="https://www.instagram.com/paranormaldistributions/" target="_blank" rel="noopener" aria-label="Instagram" class="footer__social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="https://www.threads.net/@paranormaldistributions" target="_blank" rel="noopener" aria-label="Threads" class="footer__social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 7.5c-1.333-3-3.667-4.5-7-4.5C7.5 3 4 6.5 4 12s3.5 9 8 9c3.5 0 6.5-2 7.5-5.5"/>
+            <path d="M14.5 9c-.667-.333-1.5-.5-2.5-.5-2.5 0-4 1.5-4 3.5s1.5 3 3.5 3c1.5 0 2.833-.5 3.5-2 .167-.5.25-1 .25-1.5 0-2-1.25-3-3.25-3"/>
+          </svg>
+        </a>
+        <div class="footer__copy">© 2026 Jithin K Haridas</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    
+    const ghost     = document.querySelector('.nav-ghost');
+    const nav       = document.querySelector('.nav__inner');
+    const ghostBody = document.querySelector('.ghost-body');
+    const eyeL      = document.querySelector('.ghost-eye-l');
+    const eyeR      = document.querySelector('.ghost-eye-r');
+
+    let x = 130, dir = 1, tick = 0;
+    let flickerTimer = Math.floor(Math.random() * 300);
+    let isWhite = false, whiteTimer = 0;
+
+    function setGhostColor(white) {
+      ghostBody.setAttribute('fill',   white ? 'rgba(255,255,255,0.15)' : 'rgba(255,107,53,0.18)');
+      ghostBody.setAttribute('stroke', white ? 'rgba(255,255,255,0.5)'  : 'rgba(255,107,53,0.6)');
+      eyeL.setAttribute('fill', white ? 'rgba(255,255,255,0.95)' : 'rgba(255,107,53,0.9)');
+      eyeR.setAttribute('fill', white ? 'rgba(255,255,255,0.95)' : 'rgba(255,107,53,0.9)');
+    }
+
+    function animate() {
+      tick++; flickerTimer++;
+      if (isWhite) whiteTimer++;
+
+      x += 0.35 * dir;
+      const navW = nav.offsetWidth;
+      if (x > navW - 160) { dir = -1; ghost.style.transform = 'scaleX(-1)'; }
+      if (x < 130)        { dir =  1; ghost.style.transform = 'scaleX(1)'; }
+
+      const y = Math.sin(tick * 0.04) * 3;
+      let opacity = 0.72;
+      let filter  = 'drop-shadow(0 0 3px rgba(255,107,53,0.25))';
+
+      if (!isWhite && flickerTimer > 280 && Math.random() < 0.008) {
+        isWhite = true; whiteTimer = 0; setGhostColor(true);
+      }
+      if (isWhite) {
+        filter  = 'drop-shadow(0 0 10px rgba(255,107,53,0.9)) drop-shadow(0 0 4px rgba(255,255,255,0.6))';
+        opacity = 0.95;
+        if (whiteTimer > 90) { isWhite = false; setGhostColor(false); }
+      }
+      if (!isWhite && flickerTimer > 200 && flickerTimer < 206) {
+        opacity = flickerTimer % 2 === 0 ? 0.1 : 0.9;
+        filter  = 'drop-shadow(0 0 8px rgba(255,107,53,0.8))';
+      }
+      if (flickerTimer > 400) flickerTimer = 0;
+
+      ghost.style.position  = 'absolute';
+      ghost.style.left      = x + 'px';
+      ghost.style.top       = '50%';
+      ghost.style.marginTop = (y - 11) + 'px';
+      ghost.style.opacity   = opacity;
+      ghost.style.filter    = filter;
+      ghost.style.pointerEvents = 'none';
+      requestAnimationFrame(animate);
+    }
+
+    nav.style.position = 'relative';
+    animate();
+
+    
+    const toggleBtn = document.getElementById('themeToggle');
+    const iconMoon  = document.getElementById('iconMoon');
+    const iconSun   = document.getElementById('iconSun');
+
+    function applyTheme(theme) {
+      if (theme === 'light') {
+        document.body.classList.add('light');
+        iconMoon.style.display = 'none';
+        iconSun.style.display  = 'block';
+      } else {
+        document.body.classList.remove('light');
+        iconMoon.style.display = 'block';
+        iconSun.style.display  = 'none';
+      }
+    }
+
+    applyTheme(localStorage.getItem('pd-theme') || 'dark');
+    toggleBtn.addEventListener('click', () => {
+      const next = document.body.classList.contains('light') ? 'dark' : 'light';
+      localStorage.setItem('pd-theme', next);
+      applyTheme(next);
+    });
+  </script>
+
+</body>
+</html>

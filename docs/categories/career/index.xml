@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Career on Paranormal Distributions</title>
-    <link>https://paranormaldistributions.com/categories/career/</link>
-    <description>Recent content in Career on Paranormal Distributions</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://paranormaldistributions.com/categories/career/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Why I Started Paranormal Distributions</title>
-      <link>https://paranormaldistributions.com/posts/why-i-started-paranormal-distributions/</link>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://paranormaldistributions.com/posts/why-i-started-paranormal-distributions/</guid>
-      <description>&lt;p&gt;Every dataset has a ghost.&lt;/p&gt;&#xA;&lt;p&gt;Not literally but there&amp;rsquo;s always something in the data that doesn&amp;rsquo;t behave the way the textbook says it should. A distribution that skews when it shouldn&amp;rsquo;t. A metric that moves without an obvious cause. A cohort that refuses to fit the model.&lt;/p&gt;&#xA;&lt;p&gt;After a few years working in analytics, I&amp;rsquo;ve come to believe that the most interesting part of this job isn&amp;rsquo;t the clean, well-labelled insight. It&amp;rsquo;s the moment just before, when something looks wrong, and you don&amp;rsquo;t know yet whether it&amp;rsquo;s noise, a bug, or a signal that changes everything.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Career on Paranormal Distributions</title>
+		<link>http://localhost:51043/categories/career/</link>
+		<description>Recent content in Career on Paranormal Distributions</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 17 Jun 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:51043/categories/career/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>The Analyst Interview is Not About the Right Answer</title>
+				<link>http://localhost:51043/posts/ba-interview-not-about-right-answer/</link>
+				<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:51043/posts/ba-interview-not-about-right-answer/</guid>
+				<description>&lt;p&gt;Most people prepare for a analyst interview by practising answers.&lt;/p&gt;&#xA;&lt;p&gt;That is the wrong thing to practise.&lt;/p&gt;&#xA;&lt;p&gt;Interviewers are not checking your answer. They are watching how you got there. A wrong answer reached through good thinking is more impressive than a right answer that appeared from nowhere. A structured approach to a problem you cannot fully solve is more valuable than a perfect solution to the wrong question.&lt;/p&gt;&#xA;&lt;p&gt;This post is about the three rounds most analyst interviews have, what interviewers are actually evaluating in each, and how to prepare for that instead of the answer.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Why I Started Paranormal Distributions</title>
+				<link>http://localhost:51043/posts/why-i-started-paranormal-distributions/</link>
+				<pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:51043/posts/why-i-started-paranormal-distributions/</guid>
+				<description>&lt;p&gt;Every dataset has a ghost.&lt;/p&gt;&#xA;&lt;p&gt;Not literally but there&amp;rsquo;s always something in the data that doesn&amp;rsquo;t behave the way the textbook says it should. A distribution that skews when it shouldn&amp;rsquo;t. A metric that moves without an obvious cause. A cohort that refuses to fit the model.&lt;/p&gt;&#xA;&lt;p&gt;After a few years working in analytics, I&amp;rsquo;ve come to believe that the most interesting part of this job isn&amp;rsquo;t the clean, well-labelled insight. It&amp;rsquo;s the moment just before, when something looks wrong, and you don&amp;rsquo;t know yet whether it&amp;rsquo;s noise, a bug, or a signal that changes everything.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>
